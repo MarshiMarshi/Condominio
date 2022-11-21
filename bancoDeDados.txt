@@ -1,0 +1,69 @@
+Enums
+- StatusEncomendaEnum
+° PENDENTE
+° ENTREGUE
+° ATRASADO
+° DEVOLVIDO
+° AUSENTE
+
+- LocalArmazenamentoEnum
+° GUARITA
+° ARMAZEM
+
+- BlocoEnum
+° A
+° B
+° C
+
+- TipoPessoaEnum
+° PARENTE
+° FUNCIONARIO
+
+- MotivoEnum
+° MUDOU_SE
+° ENDERECO_INSUFICIENTE
+° NAO_EXISTE_NUMERO
+° DESCONHECIDO
+° RECUSADO
+° NAO_PROCURADO
+° AUSENTE
+° FALECIDO
+
+
+Encomenda
+- id: Integer
+- destinatario: Morador
+- descricaoAusente: DescricaoAusente
+- descricaoDevolutiva: DescricaoDevolutiva
+- status: StatusEncomendaEnum
+- localArmazenamento: LocalArmazenamentoEnum
+- dataDevolutiva: date
+- dataChegada: date
+
+
+Morador
+- id: Integer
+- nome: string
+- rg: string
+- cpf: string
+- bloco: BlocoEnum
+- apartamento: int
+- autorizacao: Autorizacao
+
+
+Autorizacao
+- id: integer
+- nome: string
+- tipoPessoa: TipoPessoaEnum
+
+
+DescricaoAusente
+- id: Integer
+- descricao: string
+- motivo: MotivoEnum
+
+
+DescricaoDevolutiva
+- id: Integer
+- descricao: string
+- motivo: MotivoEnum
