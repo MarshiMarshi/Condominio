@@ -20,12 +20,6 @@ Enums
 ° FUNCIONARIO
 
 - MotivoEnum
-° MUDOU_SE
-° ENDERECO_INSUFICIENTE
-° NAO_EXISTE_NUMERO
-° DESCONHECIDO
-° RECUSADO
-° NAO_PROCURADO
 ° AUSENTE
 ° FALECIDO
 
@@ -43,12 +37,12 @@ Encomenda
 
 Morador
 - id: Integer
-- nome: string
+- nome: string*
 - rg: string
 - cpf: string
-- bloco: BlocoEnum
-- apartamento: int
-- autorizacao: Autorizacao
+- bloco: BlocoEnum*
+- apartamento: int*
+- autorizacao: Autorizacao*
 
 
 Autorizacao
