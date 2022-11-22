@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\BlocoEnum.cs" />
     <Compile Include="Enums\LocalArmazenamentoEnum.cs" />
     <Compile Include="Enums\MotivoEnum.cs" />
     <Compile Include="Enums\StatusEncomendaEnum.cs" />
@@ -105,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmMainView.resx">
       <DependentUpon>frmMainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmMoradorView.resx">
+      <DependentUpon>frmMoradorView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

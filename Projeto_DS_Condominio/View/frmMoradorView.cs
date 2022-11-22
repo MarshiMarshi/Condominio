@@ -16,5 +16,19 @@ namespace Projeto_DS_Condominio.View
         {
             InitializeComponent();
         }
+
+        private static frmMoradorView instance;
+        internal static frmMoradorView GetInstance(frmMainView mainView)
+        {
+            if (instance == null || instance.IsDisposed)
+                instance = new frmMoradorView();
+            else
+            {
+                if (instance.WindowState == FormWindowState.Minimized)
+                    instance.WindowState = FormWindowState.Normal;
+                instance.BringToFront();
+            }
+            return instance;
+        }
     }
 }
