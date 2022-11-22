@@ -8,6 +8,9 @@ namespace Projeto_DS_Condominio.Repository
 {
     public class MoradorRepository : RepositoryBase
     {
-        
+        public MoradorRepository(string connectionString)
+        {
+            this.connectionString = connectionString;
+        }
     }
 }

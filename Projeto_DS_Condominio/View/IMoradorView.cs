@@ -8,6 +8,6 @@ namespace Projeto_DS_Condominio.View
 {
     public interface IMoradorView
     {
-
+        void Show();
     }
 }

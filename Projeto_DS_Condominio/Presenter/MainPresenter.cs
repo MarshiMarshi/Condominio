@@ -30,7 +30,7 @@ namespace Projeto_DS_Condominio.Presenter
         private void ShowMoradorView(object sender, EventArgs e)
         {
             IMoradorView moradorView = frmMoradorView.GetInstance((frmMainView)mainView);
-            IMoradorRepository moradorRepository = new MoradorRepository();
+            IMoradorRepository moradorRepository = (IMoradorRepository)new MoradorRepository(sqlConnectionString);
             new MoradorPresenter(moradorView, moradorRepository);
         }
     }

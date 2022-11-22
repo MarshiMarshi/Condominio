@@ -21,7 +21,12 @@ namespace Projeto_DS_Condominio.View
         internal static frmMoradorView GetInstance(frmMainView mainView)
         {
             if (instance == null || instance.IsDisposed)
+            {
                 instance = new frmMoradorView();
+                instance.MdiParent = mainView;
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
+            }
             else
             {
                 if (instance.WindowState == FormWindowState.Minimized)
