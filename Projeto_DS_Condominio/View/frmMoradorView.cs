@@ -17,7 +17,78 @@ namespace Projeto_DS_Condominio.View
             InitializeComponent();
         }
 
+        private bool isSucessful;
+        private bool isEditing;
+        private bool isSearching;
+
         private static frmMoradorView instance;
+        private void AssociateAndRaiseViewEvents()
+        {
+            btnPesquisar.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+            txtNomePesquisa.KeyDown += (s, e) =>
+            {
+                if (e.KeyCode == Keys.Enter)
+                    SearchEvent?.Invoke(this, EventArgs.Empty);
+            };
+            btnSalvar.Click += delegate { SaveEvent?.Invoke(this, EventArgs.Empty); };
+            btnLimpar.Click += delegate { CancelEvent?.Invoke(this, EventArgs.Empty); };
+            //Others
+        }
+
+        public string Nome
+        {
+            get { return txtNome.Text; }
+            set { txtNome.Text = value; }
+        }
+
+        public string Rg
+        {
+            get { return mtxRG.Text; }
+            set { mtxRG.Text = value; }
+        }
+
+        public string Cpf
+        {
+            get { return mtxCPF.Text; }
+            set { mtxCPF.Text = value; }
+        }
+
+        public string Bloco
+        {
+            get { return cmbBloco.Text; }
+            set { cmbBloco.Text = value; }
+        }
+
+        public string Apartamento
+        {
+            get { return txtApartamento.Text; }
+            set { txtApartamento.Text = value; }
+        }
+
+        public string NomePesquisa
+        {
+            get { return txtNomePesquisa.Text; }
+            set { txtNomePesquisa.Text = value; }
+        }
+
+        public bool IsEditing
+        {
+            get { return isEditing; }
+            set { isEditing = value; }
+        }
+
+        public bool IsSearching
+        { 
+            get { return isSearching; }
+            set { isSearching = value; }
+        }
+
+        public bool IsSucessful
+        {
+            get { return isSucessful; }
+            set { isSucessful = value; }
+        }
+
         internal static frmMoradorView GetInstance(frmMainView mainView)
         {
             if (instance == null || instance.IsDisposed)
@@ -26,6 +97,7 @@ namespace Projeto_DS_Condominio.View
                 instance.MdiParent = mainView;
                 instance.FormBorderStyle = FormBorderStyle.None;
                 instance.Dock = DockStyle.Fill;
+                instance.Show();
             }
             else
             {
@@ -35,5 +107,12 @@ namespace Projeto_DS_Condominio.View
             }
             return instance;
         }
+
+        public event EventHandler SearchEvent;
+        public event EventHandler AddNewEvent;
+        public event EventHandler EditEvent;
+        public event EventHandler DeleteEvent;
+        public event EventHandler SaveEvent;
+        public event EventHandler CancelEvent;
     }
 }

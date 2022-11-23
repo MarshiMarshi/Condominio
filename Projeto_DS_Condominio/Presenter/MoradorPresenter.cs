@@ -19,7 +19,28 @@ namespace Projeto_DS_Condominio.Presenter
             this.view = view;
             this.repository = repository;
 
+            //this.view.SearchEvent += SearchPet;
+            //this.view.AddNewEvent += AddNewPet;
+            //this.view.EditEvent += LoadSelectedPetToEdit;
+            //this.view.DeleteEvent += DeleteSelectedPet;
+            //this.view.SaveEvent += SavePet;
+            this.view.CancelEvent += CancelAction;
+
             this.view.Show();
+        }
+
+        public void CleanViewFields()
+        {
+            this.view.Nome = "";
+            this.view.Rg = "";
+            this.view.Cpf = "";
+            this.view.Bloco = "";
+            this.view.Apartamento = "";
+        }
+        
+        public void CancelAction(Object sender, EventArgs e)
+        {
+            CleanViewFields();
         }
     }
 }
