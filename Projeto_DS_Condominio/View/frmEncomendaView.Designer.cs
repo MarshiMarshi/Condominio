@@ -1,7 +1,7 @@
 ﻿
 namespace Projeto_DS_Condominio.View
 {
-    partial class frmEncomendaView
+    partial class FrmEncomendaView
     {
         /// <summary>
         /// Required designer variable.
@@ -38,15 +38,6 @@ namespace Projeto_DS_Condominio.View
             this.label1 = new System.Windows.Forms.Label();
             this.tabCRUD = new System.Windows.Forms.TabControl();
             this.tpCreate = new System.Windows.Forms.TabPage();
-            this.tpUpdate = new System.Windows.Forms.TabPage();
-            this.pnlEncomendas = new System.Windows.Forms.Panel();
-            this.txtNomeDestinatarioPesquisa = new System.Windows.Forms.TextBox();
-            this.cmbStatusPesquisa = new System.Windows.Forms.ComboBox();
-            this.lblStatusPesquisa = new System.Windows.Forms.Label();
-            this.cmbIntervalo = new System.Windows.Forms.ComboBox();
-            this.dtpDataInicio = new System.Windows.Forms.DateTimePicker();
-            this.lblEntre = new System.Windows.Forms.Label();
-            this.lblNomeDestinatarioPesquisa = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.grpDestinatario = new System.Windows.Forms.GroupBox();
             this.txtApartamento = new System.Windows.Forms.TextBox();
@@ -70,16 +61,49 @@ namespace Projeto_DS_Condominio.View
             this.mtxDataChegada = new System.Windows.Forms.MaskedTextBox();
             this.lblDataEntrega = new System.Windows.Forms.Label();
             this.cmbLocalArmazem = new System.Windows.Forms.ComboBox();
+            this.tpUpdate = new System.Windows.Forms.TabPage();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.pnlEncomendas = new System.Windows.Forms.Panel();
+            this.txtNomeDestinatarioPesquisa = new System.Windows.Forms.TextBox();
+            this.cmbStatusPesquisa = new System.Windows.Forms.ComboBox();
+            this.lblStatusPesquisa = new System.Windows.Forms.Label();
+            this.cmbIntervalo = new System.Windows.Forms.ComboBox();
+            this.dtpDataInicio = new System.Windows.Forms.DateTimePicker();
+            this.lblEntre = new System.Windows.Forms.Label();
+            this.lblNomeDestinatarioPesquisa = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.tabCRUD.SuspendLayout();
             this.tpCreate.SuspendLayout();
-            this.tpUpdate.SuspendLayout();
-            this.pnlEncomendas.SuspendLayout();
             this.grpDestinatario.SuspendLayout();
             this.grpEncomenda.SuspendLayout();
             this.grpDescricao.SuspendLayout();
+            this.tpUpdate.SuspendLayout();
+            this.pnlEncomendas.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -159,6 +183,7 @@ namespace Projeto_DS_Condominio.View
             this.tabCRUD.Controls.Add(this.tpCreate);
             this.tabCRUD.Controls.Add(this.tpUpdate);
             this.tabCRUD.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tabCRUD.Enabled = false;
             this.tabCRUD.Location = new System.Drawing.Point(0, 0);
             this.tabCRUD.Name = "tabCRUD";
             this.tabCRUD.SelectedIndex = 0;
@@ -178,86 +203,6 @@ namespace Projeto_DS_Condominio.View
             this.tpCreate.Size = new System.Drawing.Size(259, 473);
             this.tpCreate.TabIndex = 0;
             this.tpCreate.Text = "Criar Encomenda";
-            // 
-            // tpUpdate
-            // 
-            this.tpUpdate.BackColor = System.Drawing.Color.White;
-            this.tpUpdate.Controls.Add(this.btnCancelar);
-            this.tpUpdate.Location = new System.Drawing.Point(4, 22);
-            this.tpUpdate.Name = "tpUpdate";
-            this.tpUpdate.Padding = new System.Windows.Forms.Padding(3);
-            this.tpUpdate.Size = new System.Drawing.Size(259, 473);
-            this.tpUpdate.TabIndex = 1;
-            this.tpUpdate.Text = "Editar Encomenda";
-            // 
-            // pnlEncomendas
-            // 
-            this.pnlEncomendas.BackColor = System.Drawing.Color.White;
-            this.pnlEncomendas.Controls.Add(this.panel2);
-            this.pnlEncomendas.Controls.Add(this.panel3);
-            this.pnlEncomendas.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlEncomendas.Location = new System.Drawing.Point(267, 129);
-            this.pnlEncomendas.Name = "pnlEncomendas";
-            this.pnlEncomendas.Size = new System.Drawing.Size(533, 370);
-            this.pnlEncomendas.TabIndex = 12;
-            // 
-            // txtNomeDestinatarioPesquisa
-            // 
-            this.txtNomeDestinatarioPesquisa.BackColor = System.Drawing.Color.White;
-            this.txtNomeDestinatarioPesquisa.Location = new System.Drawing.Point(285, 38);
-            this.txtNomeDestinatarioPesquisa.Name = "txtNomeDestinatarioPesquisa";
-            this.txtNomeDestinatarioPesquisa.Size = new System.Drawing.Size(503, 20);
-            this.txtNomeDestinatarioPesquisa.TabIndex = 13;
-            // 
-            // cmbStatusPesquisa
-            // 
-            this.cmbStatusPesquisa.FormattingEnabled = true;
-            this.cmbStatusPesquisa.Location = new System.Drawing.Point(323, 91);
-            this.cmbStatusPesquisa.Name = "cmbStatusPesquisa";
-            this.cmbStatusPesquisa.Size = new System.Drawing.Size(116, 21);
-            this.cmbStatusPesquisa.TabIndex = 15;
-            // 
-            // lblStatusPesquisa
-            // 
-            this.lblStatusPesquisa.AutoSize = true;
-            this.lblStatusPesquisa.Location = new System.Drawing.Point(282, 94);
-            this.lblStatusPesquisa.Name = "lblStatusPesquisa";
-            this.lblStatusPesquisa.Size = new System.Drawing.Size(40, 13);
-            this.lblStatusPesquisa.TabIndex = 16;
-            this.lblStatusPesquisa.Text = "Status:";
-            // 
-            // cmbIntervalo
-            // 
-            this.cmbIntervalo.FormattingEnabled = true;
-            this.cmbIntervalo.Location = new System.Drawing.Point(323, 64);
-            this.cmbIntervalo.Name = "cmbIntervalo";
-            this.cmbIntervalo.Size = new System.Drawing.Size(207, 21);
-            this.cmbIntervalo.TabIndex = 17;
-            // 
-            // dtpDataInicio
-            // 
-            this.dtpDataInicio.Location = new System.Drawing.Point(536, 65);
-            this.dtpDataInicio.Name = "dtpDataInicio";
-            this.dtpDataInicio.Size = new System.Drawing.Size(252, 20);
-            this.dtpDataInicio.TabIndex = 18;
-            // 
-            // lblEntre
-            // 
-            this.lblEntre.AutoSize = true;
-            this.lblEntre.Location = new System.Drawing.Point(282, 67);
-            this.lblEntre.Name = "lblEntre";
-            this.lblEntre.Size = new System.Drawing.Size(35, 13);
-            this.lblEntre.TabIndex = 19;
-            this.lblEntre.Text = "Entre:";
-            // 
-            // lblNomeDestinatarioPesquisa
-            // 
-            this.lblNomeDestinatarioPesquisa.AutoSize = true;
-            this.lblNomeDestinatarioPesquisa.Location = new System.Drawing.Point(282, 22);
-            this.lblNomeDestinatarioPesquisa.Name = "lblNomeDestinatarioPesquisa";
-            this.lblNomeDestinatarioPesquisa.Size = new System.Drawing.Size(112, 13);
-            this.lblNomeDestinatarioPesquisa.TabIndex = 20;
-            this.lblNomeDestinatarioPesquisa.Text = "Nome do Destinatário:";
             // 
             // btnLimpar
             // 
@@ -499,14 +444,96 @@ namespace Projeto_DS_Condominio.View
             this.cmbLocalArmazem.Size = new System.Drawing.Size(76, 21);
             this.cmbLocalArmazem.TabIndex = 18;
             // 
+            // tpUpdate
+            // 
+            this.tpUpdate.BackColor = System.Drawing.Color.White;
+            this.tpUpdate.Controls.Add(this.groupBox1);
+            this.tpUpdate.Controls.Add(this.groupBox2);
+            this.tpUpdate.Controls.Add(this.btnCancelar);
+            this.tpUpdate.Location = new System.Drawing.Point(4, 22);
+            this.tpUpdate.Name = "tpUpdate";
+            this.tpUpdate.Padding = new System.Windows.Forms.Padding(3);
+            this.tpUpdate.Size = new System.Drawing.Size(259, 473);
+            this.tpUpdate.TabIndex = 1;
+            this.tpUpdate.Text = "Editar Encomenda";
+            // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(6, 407);
+            this.btnCancelar.Location = new System.Drawing.Point(6, 442);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(121, 23);
             this.btnCancelar.TabIndex = 32;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // pnlEncomendas
+            // 
+            this.pnlEncomendas.BackColor = System.Drawing.Color.White;
+            this.pnlEncomendas.Controls.Add(this.panel2);
+            this.pnlEncomendas.Controls.Add(this.panel3);
+            this.pnlEncomendas.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlEncomendas.Location = new System.Drawing.Point(267, 129);
+            this.pnlEncomendas.Name = "pnlEncomendas";
+            this.pnlEncomendas.Size = new System.Drawing.Size(533, 370);
+            this.pnlEncomendas.TabIndex = 12;
+            // 
+            // txtNomeDestinatarioPesquisa
+            // 
+            this.txtNomeDestinatarioPesquisa.BackColor = System.Drawing.Color.White;
+            this.txtNomeDestinatarioPesquisa.Location = new System.Drawing.Point(285, 38);
+            this.txtNomeDestinatarioPesquisa.Name = "txtNomeDestinatarioPesquisa";
+            this.txtNomeDestinatarioPesquisa.Size = new System.Drawing.Size(503, 20);
+            this.txtNomeDestinatarioPesquisa.TabIndex = 13;
+            // 
+            // cmbStatusPesquisa
+            // 
+            this.cmbStatusPesquisa.FormattingEnabled = true;
+            this.cmbStatusPesquisa.Location = new System.Drawing.Point(323, 91);
+            this.cmbStatusPesquisa.Name = "cmbStatusPesquisa";
+            this.cmbStatusPesquisa.Size = new System.Drawing.Size(116, 21);
+            this.cmbStatusPesquisa.TabIndex = 15;
+            // 
+            // lblStatusPesquisa
+            // 
+            this.lblStatusPesquisa.AutoSize = true;
+            this.lblStatusPesquisa.Location = new System.Drawing.Point(282, 94);
+            this.lblStatusPesquisa.Name = "lblStatusPesquisa";
+            this.lblStatusPesquisa.Size = new System.Drawing.Size(40, 13);
+            this.lblStatusPesquisa.TabIndex = 16;
+            this.lblStatusPesquisa.Text = "Status:";
+            // 
+            // cmbIntervalo
+            // 
+            this.cmbIntervalo.FormattingEnabled = true;
+            this.cmbIntervalo.Location = new System.Drawing.Point(323, 64);
+            this.cmbIntervalo.Name = "cmbIntervalo";
+            this.cmbIntervalo.Size = new System.Drawing.Size(207, 21);
+            this.cmbIntervalo.TabIndex = 17;
+            // 
+            // dtpDataInicio
+            // 
+            this.dtpDataInicio.Location = new System.Drawing.Point(536, 65);
+            this.dtpDataInicio.Name = "dtpDataInicio";
+            this.dtpDataInicio.Size = new System.Drawing.Size(252, 20);
+            this.dtpDataInicio.TabIndex = 18;
+            // 
+            // lblEntre
+            // 
+            this.lblEntre.AutoSize = true;
+            this.lblEntre.Location = new System.Drawing.Point(282, 67);
+            this.lblEntre.Name = "lblEntre";
+            this.lblEntre.Size = new System.Drawing.Size(35, 13);
+            this.lblEntre.TabIndex = 19;
+            this.lblEntre.Text = "Entre:";
+            // 
+            // lblNomeDestinatarioPesquisa
+            // 
+            this.lblNomeDestinatarioPesquisa.AutoSize = true;
+            this.lblNomeDestinatarioPesquisa.Location = new System.Drawing.Point(282, 22);
+            this.lblNomeDestinatarioPesquisa.Name = "lblNomeDestinatarioPesquisa";
+            this.lblNomeDestinatarioPesquisa.Size = new System.Drawing.Size(112, 13);
+            this.lblNomeDestinatarioPesquisa.TabIndex = 20;
+            this.lblNomeDestinatarioPesquisa.Text = "Nome do Destinatário:";
             // 
             // btnPesquisar
             // 
@@ -516,6 +543,228 @@ namespace Projeto_DS_Condominio.View
             this.btnPesquisar.TabIndex = 5;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(3, 16);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(247, 141);
+            this.groupBox1.TabIndex = 33;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Dados do Destinatário";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(140, 106);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(81, 20);
+            this.textBox1.TabIndex = 17;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(9, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Nome do Destinatário:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(9, 109);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Número do Apartamento:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(52, 79);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(59, 21);
+            this.comboBox1.TabIndex = 16;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(9, 83);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Bloco:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(12, 46);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(209, 20);
+            this.textBox2.TabIndex = 15;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.groupBox3);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.maskedTextBox2);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.comboBox3);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.maskedTextBox3);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.comboBox4);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(3, 163);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(247, 247);
+            this.groupBox2.TabIndex = 34;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Dados da Encomenda";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.maskedTextBox1);
+            this.groupBox3.Controls.Add(this.comboBox2);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(3, 154);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(241, 90);
+            this.groupBox3.TabIndex = 22;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Descrição";
+            this.groupBox3.Visible = false;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(114, 56);
+            this.maskedTextBox1.Mask = "##/ ##/ ####";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(71, 20);
+            this.maskedTextBox1.TabIndex = 16;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(56, 26);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(162, 21);
+            this.comboBox2.TabIndex = 15;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(8, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Motivo:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(8, 59);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 13);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Data de Devolução";
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox2.Location = new System.Drawing.Point(105, 121);
+            this.maskedTextBox2.Mask = "##/ ##/ ####";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(71, 20);
+            this.maskedTextBox2.TabIndex = 21;
+            this.maskedTextBox2.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(11, 62);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 13);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Data de Chegada:";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(55, 94);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(166, 21);
+            this.comboBox3.TabIndex = 20;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(9, 97);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(40, 13);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Status:";
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox3.Location = new System.Drawing.Point(111, 59);
+            this.maskedTextBox3.Mask = "##/ ##/ ####";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(71, 20);
+            this.maskedTextBox3.TabIndex = 19;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(9, 124);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(88, 13);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Data de Entrega:";
+            this.label11.Visible = false;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(145, 32);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(76, 21);
+            this.comboBox4.TabIndex = 18;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(9, 35);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(130, 13);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Local de Armazenamento:";
             // 
             // frmEncomendaView
             // 
@@ -539,14 +788,20 @@ namespace Projeto_DS_Condominio.View
             this.panel3.PerformLayout();
             this.tabCRUD.ResumeLayout(false);
             this.tpCreate.ResumeLayout(false);
-            this.tpUpdate.ResumeLayout(false);
-            this.pnlEncomendas.ResumeLayout(false);
             this.grpDestinatario.ResumeLayout(false);
             this.grpDestinatario.PerformLayout();
             this.grpEncomenda.ResumeLayout(false);
             this.grpEncomenda.PerformLayout();
             this.grpDescricao.ResumeLayout(false);
             this.grpDescricao.PerformLayout();
+            this.tpUpdate.ResumeLayout(false);
+            this.pnlEncomendas.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -596,5 +851,26 @@ namespace Projeto_DS_Condominio.View
         private System.Windows.Forms.ComboBox cmbLocalArmazem;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBox4;
     }
 }

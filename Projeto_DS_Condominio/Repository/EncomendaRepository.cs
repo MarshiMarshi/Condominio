@@ -8,6 +8,9 @@ namespace Projeto_DS_Condominio.Repository
 {
     public class EncomendaRepository : RepositoryBase
     {
-
+        public EncomendaRepository(string connectionString)
+        {
+            this.connectionString = connectionString;
+        }
     }
 }

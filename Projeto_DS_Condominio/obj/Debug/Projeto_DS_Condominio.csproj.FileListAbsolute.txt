@@ -8,3 +8,15 @@ C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condomin
 C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.csproj.CoreCompileInputs.cache
 C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.exe
 C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.pdb
+C:\Users\Lekashi\Documents\GitHub\Condominio\Projeto_DS_Condominio\bin\Debug\Projeto_DS_Condominio.exe.config
+C:\Users\Lekashi\Documents\GitHub\Condominio\Projeto_DS_Condominio\bin\Debug\Projeto_DS_Condominio.exe
+C:\Users\Lekashi\Documents\GitHub\Condominio\Projeto_DS_Condominio\bin\Debug\Projeto_DS_Condominio.pdb
+C:\Users\Lekashi\Documents\GitHub\Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.csproj.AssemblyReference.cache
+C:\Users\Lekashi\Documents\GitHub\Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.Properties.Resources.resources
+C:\Users\Lekashi\Documents\GitHub\Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.View.frmEncomendaView.resources
+C:\Users\Lekashi\Documents\GitHub\Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.View.frmMainView.resources
+C:\Users\Lekashi\Documents\GitHub\Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.View.frmMoradorView.resources
+C:\Users\Lekashi\Documents\GitHub\Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.csproj.GenerateResource.cache
+C:\Users\Lekashi\Documents\GitHub\Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.csproj.CoreCompileInputs.cache
+C:\Users\Lekashi\Documents\GitHub\Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.exe
+C:\Users\Lekashi\Documents\GitHub\Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.pdb
