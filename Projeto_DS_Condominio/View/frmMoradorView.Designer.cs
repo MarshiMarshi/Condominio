@@ -47,22 +47,31 @@ namespace Projeto_DS_Condominio.View
             this.cmbBloco = new System.Windows.Forms.ComboBox();
             this.lblBloco = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.pnlEncomendas = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.tpUpdate = new System.Windows.Forms.TabPage();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblStatusPesquisa = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlEncomendas = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbBlocoPesquisa = new System.Windows.Forms.ComboBox();
+            this.txtApartamentoPesquisa = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabCRUD.SuspendLayout();
             this.tpCreate.SuspendLayout();
             this.grpMorador.SuspendLayout();
-            this.pnlEncomendas.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.tpUpdate.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.pnlEncomendas.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNomePesquisa
@@ -70,9 +79,9 @@ namespace Projeto_DS_Condominio.View
             this.lblNomePesquisa.AutoSize = true;
             this.lblNomePesquisa.Location = new System.Drawing.Point(282, 41);
             this.lblNomePesquisa.Name = "lblNomePesquisa";
-            this.lblNomePesquisa.Size = new System.Drawing.Size(35, 13);
+            this.lblNomePesquisa.Size = new System.Drawing.Size(38, 13);
             this.lblNomePesquisa.TabIndex = 30;
-            this.lblNomePesquisa.Text = "Nome";
+            this.lblNomePesquisa.Text = "Nome:";
             // 
             // txtNomePesquisa
             // 
@@ -246,98 +255,6 @@ namespace Projeto_DS_Condominio.View
             this.txtNome.Size = new System.Drawing.Size(169, 20);
             this.txtNome.TabIndex = 21;
             // 
-            // pnlEncomendas
-            // 
-            this.pnlEncomendas.BackColor = System.Drawing.Color.White;
-            this.pnlEncomendas.Controls.Add(this.panel2);
-            this.pnlEncomendas.Controls.Add(this.panel3);
-            this.pnlEncomendas.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlEncomendas.Location = new System.Drawing.Point(267, 80);
-            this.pnlEncomendas.Name = "pnlEncomendas";
-            this.pnlEncomendas.Size = new System.Drawing.Size(533, 370);
-            this.pnlEncomendas.TabIndex = 31;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Lime;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(503, 16);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(18, 78);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(6, 16);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(499, 78);
-            this.panel3.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(415, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Editar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(85, 47);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(113, 17);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Apartamento: 77";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(19, 47);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 17);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Bloco: B";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(353, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 17);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Chegou: 22/11/2022";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(18, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(219, 20);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Gustavo Gonçalo Rodrigues";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(64, 393);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(121, 23);
-            this.btnCancelar.TabIndex = 32;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
             // tpUpdate
             // 
             this.tpUpdate.BackColor = System.Drawing.Color.White;
@@ -349,11 +266,194 @@ namespace Projeto_DS_Condominio.View
             this.tpUpdate.TabIndex = 1;
             this.tpUpdate.Text = "Editar Morador";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(64, 393);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(121, 23);
+            this.btnCancelar.TabIndex = 32;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // lblStatusPesquisa
+            // 
+            this.lblStatusPesquisa.AutoSize = true;
+            this.lblStatusPesquisa.Location = new System.Drawing.Point(282, 94);
+            this.lblStatusPesquisa.Name = "lblStatusPesquisa";
+            this.lblStatusPesquisa.Size = new System.Drawing.Size(37, 13);
+            this.lblStatusPesquisa.TabIndex = 34;
+            this.lblStatusPesquisa.Text = "Bloco:";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Location = new System.Drawing.Point(6, 16);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(499, 78);
+            this.panel3.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(18, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(219, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Gustavo Gonçalo Rodrigues";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(19, 47);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 17);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Bloco: B";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(85, 47);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(113, 17);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Apartamento: 77";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(415, 46);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Editar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(382, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "CPF: 123.456.789-09";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Lime;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Location = new System.Drawing.Point(503, 16);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(18, 78);
+            this.panel2.TabIndex = 1;
+            // 
+            // pnlEncomendas
+            // 
+            this.pnlEncomendas.BackColor = System.Drawing.Color.White;
+            this.pnlEncomendas.Controls.Add(this.panel2);
+            this.pnlEncomendas.Controls.Add(this.panel3);
+            this.pnlEncomendas.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlEncomendas.Location = new System.Drawing.Point(267, 132);
+            this.pnlEncomendas.Name = "pnlEncomendas";
+            this.pnlEncomendas.Size = new System.Drawing.Size(533, 318);
+            this.pnlEncomendas.TabIndex = 31;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(284, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(92, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "RG: 22.038.990-1";
+            // 
+            // cmbBlocoPesquisa
+            // 
+            this.cmbBlocoPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBlocoPesquisa.FormattingEnabled = true;
+            this.cmbBlocoPesquisa.Location = new System.Drawing.Point(323, 91);
+            this.cmbBlocoPesquisa.Name = "cmbBlocoPesquisa";
+            this.cmbBlocoPesquisa.Size = new System.Drawing.Size(59, 21);
+            this.cmbBlocoPesquisa.TabIndex = 38;
+            // 
+            // txtApartamentoPesquisa
+            // 
+            this.txtApartamentoPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApartamentoPesquisa.Location = new System.Drawing.Point(475, 91);
+            this.txtApartamentoPesquisa.Name = "txtApartamentoPesquisa";
+            this.txtApartamentoPesquisa.Size = new System.Drawing.Size(81, 20);
+            this.txtApartamentoPesquisa.TabIndex = 39;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(399, 94);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 13);
+            this.label6.TabIndex = 40;
+            this.label6.Text = "Apartamento:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.maskedTextBox1.Location = new System.Drawing.Point(323, 65);
+            this.maskedTextBox1.Mask = "00.000.000-0";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(82, 20);
+            this.maskedTextBox1.TabIndex = 42;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(282, 68);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 13);
+            this.label7.TabIndex = 41;
+            this.label7.Text = "RG:";
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.maskedTextBox2.Location = new System.Drawing.Point(475, 65);
+            this.maskedTextBox2.Mask = "000.000.000-00";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(98, 20);
+            this.maskedTextBox2.TabIndex = 44;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(432, 68);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(30, 13);
+            this.label8.TabIndex = 43;
+            this.label8.Text = "CPF:";
+            // 
             // frmMoradorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtApartamentoPesquisa);
+            this.Controls.Add(this.cmbBlocoPesquisa);
+            this.Controls.Add(this.lblStatusPesquisa);
             this.Controls.Add(this.pnlEncomendas);
             this.Controls.Add(this.lblNomePesquisa);
             this.Controls.Add(this.txtNomePesquisa);
@@ -365,10 +465,10 @@ namespace Projeto_DS_Condominio.View
             this.tpCreate.ResumeLayout(false);
             this.grpMorador.ResumeLayout(false);
             this.grpMorador.PerformLayout();
-            this.pnlEncomendas.ResumeLayout(false);
+            this.tpUpdate.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.tpUpdate.ResumeLayout(false);
+            this.pnlEncomendas.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,15 +493,24 @@ namespace Projeto_DS_Condominio.View
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.MaskedTextBox mtxCPF;
         private System.Windows.Forms.MaskedTextBox mtxRG;
-        private System.Windows.Forms.Panel pnlEncomendas;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TabPage tpUpdate;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblStatusPesquisa;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TabPage tpUpdate;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlEncomendas;
+        private System.Windows.Forms.ComboBox cmbBlocoPesquisa;
+        private System.Windows.Forms.TextBox txtApartamentoPesquisa;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.Label label8;
     }
 }
