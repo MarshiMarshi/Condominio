@@ -12,6 +12,5 @@ namespace Projeto_DS_Condominio.Model
         void Editar(Morador morador);
         void Delete(int id);
         IEnumerable<Encomenda> GetAll();
-        IEnumerable<Encomenda> GetByStatus();
     }
 }
