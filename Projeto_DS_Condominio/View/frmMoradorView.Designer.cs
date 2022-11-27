@@ -51,21 +51,21 @@ namespace Projeto_DS_Condominio.View
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblStatusPesquisa = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlEncomendas = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.cmbBlocoPesquisa = new System.Windows.Forms.ComboBox();
             this.txtApartamentoPesquisa = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblApartamentoPesquisa = new System.Windows.Forms.Label();
+            this.mtxRGPesquisa = new System.Windows.Forms.MaskedTextBox();
+            this.lblRGPesquisa = new System.Windows.Forms.Label();
+            this.mtxCPFPesquisa = new System.Windows.Forms.MaskedTextBox();
+            this.lblCPFPesquisa = new System.Windows.Forms.Label();
             this.tabCRUD.SuspendLayout();
             this.tpCreate.SuspendLayout();
             this.grpMorador.SuspendLayout();
@@ -299,25 +299,32 @@ namespace Projeto_DS_Condominio.View
             this.panel3.Size = new System.Drawing.Size(499, 78);
             this.panel3.TabIndex = 2;
             // 
-            // label4
+            // label5
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(18, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(219, 20);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Gustavo Gonçalo Rodrigues";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(284, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(92, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "RG: 22.038.990-1";
             // 
-            // label12
+            // label3
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(19, 47);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 17);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Bloco: B";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(382, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "CPF: 123.456.789-09";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(415, 46);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Editar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // label13
             // 
@@ -329,23 +336,25 @@ namespace Projeto_DS_Condominio.View
             this.label13.TabIndex = 3;
             this.label13.Text = "Apartamento: 77";
             // 
-            // button1
+            // label12
             // 
-            this.button1.Location = new System.Drawing.Point(415, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Editar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(19, 47);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 17);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Bloco: B";
             // 
-            // label3
+            // label4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(382, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "CPF: 123.456.789-09";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(18, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(219, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Gustavo Gonçalo Rodrigues";
             // 
             // panel2
             // 
@@ -367,15 +376,6 @@ namespace Projeto_DS_Condominio.View
             this.pnlEncomendas.Size = new System.Drawing.Size(533, 318);
             this.pnlEncomendas.TabIndex = 31;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(284, 18);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "RG: 22.038.990-1";
-            // 
             // cmbBlocoPesquisa
             // 
             this.cmbBlocoPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -388,69 +388,69 @@ namespace Projeto_DS_Condominio.View
             // txtApartamentoPesquisa
             // 
             this.txtApartamentoPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApartamentoPesquisa.Location = new System.Drawing.Point(475, 91);
+            this.txtApartamentoPesquisa.Location = new System.Drawing.Point(508, 91);
             this.txtApartamentoPesquisa.Name = "txtApartamentoPesquisa";
-            this.txtApartamentoPesquisa.Size = new System.Drawing.Size(81, 20);
+            this.txtApartamentoPesquisa.Size = new System.Drawing.Size(98, 20);
             this.txtApartamentoPesquisa.TabIndex = 39;
             // 
-            // label6
+            // lblApartamentoPesquisa
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(399, 94);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 13);
-            this.label6.TabIndex = 40;
-            this.label6.Text = "Apartamento:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.lblApartamentoPesquisa.AutoSize = true;
+            this.lblApartamentoPesquisa.Location = new System.Drawing.Point(432, 94);
+            this.lblApartamentoPesquisa.Name = "lblApartamentoPesquisa";
+            this.lblApartamentoPesquisa.Size = new System.Drawing.Size(70, 13);
+            this.lblApartamentoPesquisa.TabIndex = 40;
+            this.lblApartamentoPesquisa.Text = "Apartamento:";
+            this.lblApartamentoPesquisa.Click += new System.EventHandler(this.label6_Click);
             // 
-            // maskedTextBox1
+            // mtxRGPesquisa
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.maskedTextBox1.Location = new System.Drawing.Point(323, 65);
-            this.maskedTextBox1.Mask = "00.000.000-0";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(82, 20);
-            this.maskedTextBox1.TabIndex = 42;
+            this.mtxRGPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.mtxRGPesquisa.Location = new System.Drawing.Point(323, 65);
+            this.mtxRGPesquisa.Mask = "00.000.000-0";
+            this.mtxRGPesquisa.Name = "mtxRGPesquisa";
+            this.mtxRGPesquisa.Size = new System.Drawing.Size(82, 20);
+            this.mtxRGPesquisa.TabIndex = 42;
             // 
-            // label7
+            // lblRGPesquisa
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(282, 68);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 13);
-            this.label7.TabIndex = 41;
-            this.label7.Text = "RG:";
+            this.lblRGPesquisa.AutoSize = true;
+            this.lblRGPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRGPesquisa.Location = new System.Drawing.Point(282, 68);
+            this.lblRGPesquisa.Name = "lblRGPesquisa";
+            this.lblRGPesquisa.Size = new System.Drawing.Size(26, 13);
+            this.lblRGPesquisa.TabIndex = 41;
+            this.lblRGPesquisa.Text = "RG:";
             // 
-            // maskedTextBox2
+            // mtxCPFPesquisa
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.maskedTextBox2.Location = new System.Drawing.Point(475, 65);
-            this.maskedTextBox2.Mask = "000.000.000-00";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(98, 20);
-            this.maskedTextBox2.TabIndex = 44;
+            this.mtxCPFPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.mtxCPFPesquisa.Location = new System.Drawing.Point(508, 65);
+            this.mtxCPFPesquisa.Mask = "000.000.000-00";
+            this.mtxCPFPesquisa.Name = "mtxCPFPesquisa";
+            this.mtxCPFPesquisa.Size = new System.Drawing.Size(98, 20);
+            this.mtxCPFPesquisa.TabIndex = 44;
             // 
-            // label8
+            // lblCPFPesquisa
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(432, 68);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(30, 13);
-            this.label8.TabIndex = 43;
-            this.label8.Text = "CPF:";
+            this.lblCPFPesquisa.AutoSize = true;
+            this.lblCPFPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPFPesquisa.Location = new System.Drawing.Point(432, 68);
+            this.lblCPFPesquisa.Name = "lblCPFPesquisa";
+            this.lblCPFPesquisa.Size = new System.Drawing.Size(30, 13);
+            this.lblCPFPesquisa.TabIndex = 43;
+            this.lblCPFPesquisa.Text = "CPF:";
             // 
             // frmMoradorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.mtxCPFPesquisa);
+            this.Controls.Add(this.lblCPFPesquisa);
+            this.Controls.Add(this.mtxRGPesquisa);
+            this.Controls.Add(this.lblRGPesquisa);
+            this.Controls.Add(this.lblApartamentoPesquisa);
             this.Controls.Add(this.txtApartamentoPesquisa);
             this.Controls.Add(this.cmbBlocoPesquisa);
             this.Controls.Add(this.lblStatusPesquisa);
@@ -507,10 +507,10 @@ namespace Projeto_DS_Condominio.View
         private System.Windows.Forms.Panel pnlEncomendas;
         private System.Windows.Forms.ComboBox cmbBlocoPesquisa;
         private System.Windows.Forms.TextBox txtApartamentoPesquisa;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblApartamentoPesquisa;
+        private System.Windows.Forms.MaskedTextBox mtxRGPesquisa;
+        private System.Windows.Forms.Label lblRGPesquisa;
+        private System.Windows.Forms.MaskedTextBox mtxCPFPesquisa;
+        private System.Windows.Forms.Label lblCPFPesquisa;
     }
 }
