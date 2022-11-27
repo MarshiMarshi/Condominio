@@ -111,7 +111,7 @@ namespace Projeto_DS_Condominio.Repository
                 if (apartamento != -1)
                 {
                     command.CommandText += "and apartamento = @apartamento ";
-                    command.Parameters.Add("@apartamento", SqlDbType.VarChar).Value = apartamento;
+                    command.Parameters.Add("@apartamento", SqlDbType.Int).Value = apartamento;
                 }
 
                 if (valBloco != "")
