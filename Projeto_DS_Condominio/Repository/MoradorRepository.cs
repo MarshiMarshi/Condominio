@@ -19,7 +19,20 @@ namespace Projeto_DS_Condominio.Repository
 
         public void Adicionar(Morador morador)
         {
-            throw new NotImplementedException();
+            List<Morador> moradorList = new List<Morador>();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "insert into Morador(nome_morador, rg_morador, cpf_morador, bloco_morador, apartamento) values (@nome, @rg, @cpf, @bloco, @apartamento)";
+                command.Parameters.Add("@nome", SqlDbType.VarChar).Value = morador.Nome;
+                command.Parameters.Add("@rg", SqlDbType.Char).Value = morador.Rg;
+                command.Parameters.Add("@cpf", SqlDbType.Char).Value = morador.Cpf;
+                command.Parameters.Add("@apartamento", SqlDbType.Int).Value = morador.Apartamento;
+                command.Parameters.Add("@bloco", SqlDbType.VarChar).Value = morador.Bloco;
+                command.ExecuteNonQuery();
+            }
         }
 
         public void Delete(int id)
