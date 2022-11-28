@@ -95,6 +95,36 @@ namespace Projeto_DS_Condominio.View
             set { value = txtApartamentoPesquisa.Text; }
         }
 
+        public string NomeEdicao
+        {
+            get { return txtNomeEdicao.Text; }
+            set { txtNomeEdicao.Text = value; }
+        }
+
+        public string CpfEdicao
+        {
+            get { return mtxCPFEdicao.Text; }
+            set { value = mtxCPFEdicao.Text; }
+        }
+
+        public string RgEdicao
+        {
+            get { return mtxRGEdicao.Text; }
+            set { value = mtxRGEdicao.Text; }
+        }
+
+        public string BlocoEdicao
+        {
+            get { return cmbBlocoEdicao.Text; }
+            set { value = cmbBlocoEdicao.Text; }
+        }
+
+        public string ApartamentoEdicao
+        {
+            get { return txtApartamentoEdicao.Text; }
+            set { value = txtApartamentoEdicao.Text; }
+        }
+
         public bool IsEditing
         {
             get { return isEditing; }
