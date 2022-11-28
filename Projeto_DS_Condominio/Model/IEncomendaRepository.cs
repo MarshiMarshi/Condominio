@@ -11,6 +11,8 @@ namespace Projeto_DS_Condominio.Model
     {
         void Adicionar(Encomenda encomenda);
         void Editar(Encomenda encomenda);
+
+        // Pesquisas
         IEnumerable<Encomenda> GetAll();
         IEnumerable<Encomenda> GetByValue(string nomeDestinatario);
         IEnumerable<Encomenda> GetByValue(StatusEncomendaEnum status);
