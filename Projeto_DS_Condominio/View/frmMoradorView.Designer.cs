@@ -66,12 +66,25 @@ namespace Projeto_DS_Condominio.View
             this.lblRGPesquisa = new System.Windows.Forms.Label();
             this.mtxCPFPesquisa = new System.Windows.Forms.MaskedTextBox();
             this.lblCPFPesquisa = new System.Windows.Forms.Label();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.grpMoradorEdicao = new System.Windows.Forms.GroupBox();
+            this.mtxCPFEdicao = new System.Windows.Forms.MaskedTextBox();
+            this.mtxRGEdicao = new System.Windows.Forms.MaskedTextBox();
+            this.lblCPFEdicao = new System.Windows.Forms.Label();
+            this.lblRGEdicao = new System.Windows.Forms.Label();
+            this.txtApartamentoEdicao = new System.Windows.Forms.TextBox();
+            this.lblNomeEdicao = new System.Windows.Forms.Label();
+            this.lblApartamentoEdicao = new System.Windows.Forms.Label();
+            this.cmbBlocoEdicao = new System.Windows.Forms.ComboBox();
+            this.lblBlocoEdicao = new System.Windows.Forms.Label();
+            this.txtNomeEdicao = new System.Windows.Forms.TextBox();
             this.tabCRUD.SuspendLayout();
             this.tpCreate.SuspendLayout();
             this.grpMorador.SuspendLayout();
             this.tpUpdate.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlEncomendas.SuspendLayout();
+            this.grpMoradorEdicao.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNomePesquisa
@@ -259,6 +272,8 @@ namespace Projeto_DS_Condominio.View
             // tpUpdate
             // 
             this.tpUpdate.BackColor = System.Drawing.Color.White;
+            this.tpUpdate.Controls.Add(this.grpMoradorEdicao);
+            this.tpUpdate.Controls.Add(this.btnEditar);
             this.tpUpdate.Controls.Add(this.btnCancelar);
             this.tpUpdate.Location = new System.Drawing.Point(4, 22);
             this.tpUpdate.Name = "tpUpdate";
@@ -269,9 +284,9 @@ namespace Projeto_DS_Condominio.View
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(64, 393);
+            this.btnCancelar.Location = new System.Drawing.Point(6, 197);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(121, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(247, 23);
             this.btnCancelar.TabIndex = 32;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -442,6 +457,129 @@ namespace Projeto_DS_Condominio.View
             this.lblCPFPesquisa.TabIndex = 43;
             this.lblCPFPesquisa.Text = "CPF:";
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(6, 168);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(247, 23);
+            this.btnEditar.TabIndex = 33;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // grpMoradorEdicao
+            // 
+            this.grpMoradorEdicao.Controls.Add(this.mtxCPFEdicao);
+            this.grpMoradorEdicao.Controls.Add(this.mtxRGEdicao);
+            this.grpMoradorEdicao.Controls.Add(this.lblCPFEdicao);
+            this.grpMoradorEdicao.Controls.Add(this.lblRGEdicao);
+            this.grpMoradorEdicao.Controls.Add(this.txtApartamentoEdicao);
+            this.grpMoradorEdicao.Controls.Add(this.lblNomeEdicao);
+            this.grpMoradorEdicao.Controls.Add(this.lblApartamentoEdicao);
+            this.grpMoradorEdicao.Controls.Add(this.cmbBlocoEdicao);
+            this.grpMoradorEdicao.Controls.Add(this.lblBlocoEdicao);
+            this.grpMoradorEdicao.Controls.Add(this.txtNomeEdicao);
+            this.grpMoradorEdicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpMoradorEdicao.Location = new System.Drawing.Point(6, 6);
+            this.grpMoradorEdicao.Name = "grpMoradorEdicao";
+            this.grpMoradorEdicao.Size = new System.Drawing.Size(247, 156);
+            this.grpMoradorEdicao.TabIndex = 34;
+            this.grpMoradorEdicao.TabStop = false;
+            this.grpMoradorEdicao.Text = "Dados do Morador";
+            // 
+            // mtxCPFEdicao
+            // 
+            this.mtxCPFEdicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.mtxCPFEdicao.Location = new System.Drawing.Point(60, 78);
+            this.mtxCPFEdicao.Mask = "000.000.000-00";
+            this.mtxCPFEdicao.Name = "mtxCPFEdicao";
+            this.mtxCPFEdicao.Size = new System.Drawing.Size(98, 20);
+            this.mtxCPFEdicao.TabIndex = 27;
+            // 
+            // mtxRGEdicao
+            // 
+            this.mtxRGEdicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.mtxRGEdicao.Location = new System.Drawing.Point(60, 51);
+            this.mtxRGEdicao.Mask = "00.000.000-0";
+            this.mtxRGEdicao.Name = "mtxRGEdicao";
+            this.mtxRGEdicao.Size = new System.Drawing.Size(82, 20);
+            this.mtxRGEdicao.TabIndex = 26;
+            // 
+            // lblCPFEdicao
+            // 
+            this.lblCPFEdicao.AutoSize = true;
+            this.lblCPFEdicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPFEdicao.Location = new System.Drawing.Point(17, 81);
+            this.lblCPFEdicao.Name = "lblCPFEdicao";
+            this.lblCPFEdicao.Size = new System.Drawing.Size(30, 13);
+            this.lblCPFEdicao.TabIndex = 25;
+            this.lblCPFEdicao.Text = "CPF:";
+            // 
+            // lblRGEdicao
+            // 
+            this.lblRGEdicao.AutoSize = true;
+            this.lblRGEdicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRGEdicao.Location = new System.Drawing.Point(17, 54);
+            this.lblRGEdicao.Name = "lblRGEdicao";
+            this.lblRGEdicao.Size = new System.Drawing.Size(26, 13);
+            this.lblRGEdicao.TabIndex = 24;
+            this.lblRGEdicao.Text = "RG:";
+            // 
+            // txtApartamentoEdicao
+            // 
+            this.txtApartamentoEdicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApartamentoEdicao.Location = new System.Drawing.Point(148, 129);
+            this.txtApartamentoEdicao.Name = "txtApartamentoEdicao";
+            this.txtApartamentoEdicao.Size = new System.Drawing.Size(81, 20);
+            this.txtApartamentoEdicao.TabIndex = 23;
+            // 
+            // lblNomeEdicao
+            // 
+            this.lblNomeEdicao.AutoSize = true;
+            this.lblNomeEdicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeEdicao.Location = new System.Drawing.Point(17, 27);
+            this.lblNomeEdicao.Name = "lblNomeEdicao";
+            this.lblNomeEdicao.Size = new System.Drawing.Size(38, 13);
+            this.lblNomeEdicao.TabIndex = 18;
+            this.lblNomeEdicao.Text = "Nome:";
+            // 
+            // lblApartamentoEdicao
+            // 
+            this.lblApartamentoEdicao.AutoSize = true;
+            this.lblApartamentoEdicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApartamentoEdicao.Location = new System.Drawing.Point(17, 132);
+            this.lblApartamentoEdicao.Name = "lblApartamentoEdicao";
+            this.lblApartamentoEdicao.Size = new System.Drawing.Size(125, 13);
+            this.lblApartamentoEdicao.TabIndex = 20;
+            this.lblApartamentoEdicao.Text = "Número do Apartamento:";
+            // 
+            // cmbBlocoEdicao
+            // 
+            this.cmbBlocoEdicao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBlocoEdicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBlocoEdicao.FormattingEnabled = true;
+            this.cmbBlocoEdicao.Location = new System.Drawing.Point(60, 104);
+            this.cmbBlocoEdicao.Name = "cmbBlocoEdicao";
+            this.cmbBlocoEdicao.Size = new System.Drawing.Size(59, 21);
+            this.cmbBlocoEdicao.TabIndex = 22;
+            // 
+            // lblBlocoEdicao
+            // 
+            this.lblBlocoEdicao.AutoSize = true;
+            this.lblBlocoEdicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBlocoEdicao.Location = new System.Drawing.Point(17, 108);
+            this.lblBlocoEdicao.Name = "lblBlocoEdicao";
+            this.lblBlocoEdicao.Size = new System.Drawing.Size(37, 13);
+            this.lblBlocoEdicao.TabIndex = 19;
+            this.lblBlocoEdicao.Text = "Bloco:";
+            // 
+            // txtNomeEdicao
+            // 
+            this.txtNomeEdicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeEdicao.Location = new System.Drawing.Point(60, 24);
+            this.txtNomeEdicao.Name = "txtNomeEdicao";
+            this.txtNomeEdicao.Size = new System.Drawing.Size(169, 20);
+            this.txtNomeEdicao.TabIndex = 21;
+            // 
             // frmMoradorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,6 +608,8 @@ namespace Projeto_DS_Condominio.View
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnlEncomendas.ResumeLayout(false);
+            this.grpMoradorEdicao.ResumeLayout(false);
+            this.grpMoradorEdicao.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -513,5 +653,17 @@ namespace Projeto_DS_Condominio.View
         private System.Windows.Forms.Label lblRGPesquisa;
         private System.Windows.Forms.MaskedTextBox mtxCPFPesquisa;
         private System.Windows.Forms.Label lblCPFPesquisa;
+        private System.Windows.Forms.GroupBox grpMoradorEdicao;
+        private System.Windows.Forms.MaskedTextBox mtxCPFEdicao;
+        private System.Windows.Forms.MaskedTextBox mtxRGEdicao;
+        private System.Windows.Forms.Label lblCPFEdicao;
+        private System.Windows.Forms.Label lblRGEdicao;
+        private System.Windows.Forms.TextBox txtApartamentoEdicao;
+        private System.Windows.Forms.Label lblNomeEdicao;
+        private System.Windows.Forms.Label lblApartamentoEdicao;
+        private System.Windows.Forms.ComboBox cmbBlocoEdicao;
+        private System.Windows.Forms.Label lblBlocoEdicao;
+        private System.Windows.Forms.TextBox txtNomeEdicao;
+        private System.Windows.Forms.Button btnEditar;
     }
 }
