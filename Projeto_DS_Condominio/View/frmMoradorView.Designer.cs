@@ -401,7 +401,6 @@ namespace Projeto_DS_Condominio.View
             this.lblApartamentoPesquisa.Size = new System.Drawing.Size(70, 13);
             this.lblApartamentoPesquisa.TabIndex = 40;
             this.lblApartamentoPesquisa.Text = "Apartamento:";
-            this.lblApartamentoPesquisa.Click += new System.EventHandler(this.label6_Click);
             // 
             // mtxRGPesquisa
             // 

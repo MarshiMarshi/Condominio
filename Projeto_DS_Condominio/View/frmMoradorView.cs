@@ -114,10 +114,5 @@ namespace Projeto_DS_Condominio.View
         public event EventHandler DeleteEvent;
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
