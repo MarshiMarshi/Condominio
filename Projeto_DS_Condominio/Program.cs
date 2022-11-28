@@ -21,7 +21,7 @@ namespace Projeto_DS_Condominio
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            string sqlConnectionString = ConfigurationManager.ConnectionStrings["projeto_ds_condominio_Connection"].ConnectionString;
+            string sqlConnectionString = ConfigurationManager.ConnectionStrings["projeto_ds_condominioConnection"].ConnectionString;
             IMainView mainView = new frmMainView();
             new MainPresenter(mainView, sqlConnectionString);
             Application.Run(new frmMainView());
