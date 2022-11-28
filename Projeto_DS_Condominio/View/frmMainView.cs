@@ -16,6 +16,7 @@ namespace Projeto_DS_Condominio.View
         {
             InitializeComponent();
             btnEncomenda.Click += delegate { ShowEncomendaView?.Invoke(this, EventArgs.Empty); };
+            btnMorador.Click += delegate { ShowMoradorView?.Invoke(this, EventArgs.Empty); };
         }
 
         public event EventHandler ShowEncomendaView;

@@ -3,8 +3,9 @@ C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condomin
 C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condominio\Projeto_DS_Condominio\bin\Debug\Projeto_DS_Condominio.pdb
 C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.csproj.AssemblyReference.cache
 C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.Properties.Resources.resources
-C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.View.MainView.resources
 C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.csproj.GenerateResource.cache
 C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.csproj.CoreCompileInputs.cache
 C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.exe
 C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.pdb
+C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.View.frmEncomendaView.resources
+C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.View.frmMainView.resources

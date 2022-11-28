@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\BlocoEnum.cs" />
+    <Compile Include="Enums\IntervaloEnum.cs" />
     <Compile Include="Enums\LocalArmazenamentoEnum.cs" />
     <Compile Include="Enums\MotivoEnum.cs" />
     <Compile Include="Enums\StatusEncomendaEnum.cs" />

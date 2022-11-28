@@ -24,13 +24,15 @@ namespace Projeto_DS_Condominio.Presenter
 
         private void ShowEncomendaView(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            /*IEncomendaView encomendaView = frmEncomendaView.GetInstance((frmMainView)mainView);
+            IEncomendaRepository encomendaRepository = new EncomendaRepository();
+            new EncomendaPresenter(encomendaView, encomendaRepository);*/
         }
 
         private void ShowMoradorView(object sender, EventArgs e)
         {
             IMoradorView moradorView = frmMoradorView.GetInstance((frmMainView)mainView);
-            IMoradorRepository moradorRepository = new MoradorRepository();
+            IMoradorRepository moradorRepository = new MoradorRepository(sqlConnectionString);
             new MoradorPresenter(moradorView, moradorRepository);
         }
     }

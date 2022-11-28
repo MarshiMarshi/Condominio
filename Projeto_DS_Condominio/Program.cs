@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Projeto_DS_Condominio.View;
 using Projeto_DS_Condominio.Presenter;
 using Projeto_DS_Condominio.Repository;
+using System.Configuration;
 
 namespace Projeto_DS_Condominio
 {
@@ -20,7 +21,7 @@ namespace Projeto_DS_Condominio
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            string sqlConnectionString = "";
+            string sqlConnectionString = ConfigurationManager.ConnectionStrings["projeto_ds_condominio_Connection"].ConnectionString;
             IMainView mainView = new frmMainView();
             new MainPresenter(mainView, sqlConnectionString);
             Application.Run(new frmMainView());

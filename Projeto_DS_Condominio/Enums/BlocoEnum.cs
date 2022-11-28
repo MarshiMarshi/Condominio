@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Projeto_DS_Condominio.Enums
 {
-    public enum MotivoEnum
+    public enum BlocoEnum
     {
-        MUDOU_SE,
-        AUSENTE,
-        FALECIDO
+        A,
+        B,
+        C
     }
 }
