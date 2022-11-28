@@ -27,8 +27,8 @@ namespace Projeto_DS_Condominio.Repository
                 command.Connection = connection;
                 command.CommandText = "insert into Morador(nome_morador, rg_morador, cpf_morador, bloco_morador, apartamento) values (@nome, @rg, @cpf, @bloco, @apartamento)";
                 command.Parameters.Add("@nome", SqlDbType.VarChar).Value = morador.Nome;
-                command.Parameters.Add("@rg", SqlDbType.Char).Value = morador.Rg;
-                command.Parameters.Add("@cpf", SqlDbType.Char).Value = morador.Cpf;
+                command.Parameters.Add("@rg", SqlDbType.Char).Value = morador.Rg.ToDigitsString();
+                command.Parameters.Add("@cpf", SqlDbType.Char).Value = morador.Cpf.ToDigitsString();
                 command.Parameters.Add("@apartamento", SqlDbType.Int).Value = morador.Apartamento;
                 command.Parameters.Add("@bloco", SqlDbType.VarChar).Value = morador.Bloco;
                 command.ExecuteNonQuery();
@@ -61,8 +61,8 @@ namespace Projeto_DS_Condominio.Repository
                         Morador morador = new Morador();
                         morador.Id = (int)reader[0];
                         morador.Nome = reader[1].ToString();
-                        morador.Rg = reader[2].ToString();
-                        morador.Cpf = reader[3].ToString();
+                        morador.Rg = new Rg(reader[2].ToString());
+                        morador.Cpf = new Cpf(reader[3].ToString());
 
                         BlocoEnum bloco;
                         Enum.TryParse<BlocoEnum>(reader[4].ToString(), out bloco);
@@ -80,13 +80,15 @@ namespace Projeto_DS_Condominio.Repository
         {
             List<Morador> moradorList = new List<Morador>();
             int apartamento = int.TryParse(valApartamento, out _) ? Convert.ToInt32(valApartamento) : -1;
+            String cpf = Cpf.TryParse(valCpf, out _) ? new Cpf(valCpf).ToDigitsString() : "";
+            String rg = Cpf.TryParse(valRg, out _) ? new Rg(valRg).ToDigitsString() : "";
 
             using (var connection = new SqlConnection(connectionString))
             using (var command = new SqlCommand())
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = @"select * from Morador ";
+                command.CommandText = "select * from Morador ";
 
                 command.CommandText += "where 1 = 1 ";
 
@@ -99,13 +101,13 @@ namespace Projeto_DS_Condominio.Repository
                 if (valRg != "")
                 {
                     command.CommandText += "and rg_morador = @rg ";
-                    command.Parameters.Add("@rg", SqlDbType.Char).Value = valRg;
+                    command.Parameters.Add("@rg", SqlDbType.Char).Value = rg;
                 }
 
                 if (valCpf != "")
                 {
                     command.CommandText += "and cpf_morador = @cpf ";
-                    command.Parameters.Add("@cpf", SqlDbType.Char).Value = valCpf;
+                    command.Parameters.Add("@cpf", SqlDbType.Char).Value = cpf;
                 }
 
                 if (apartamento != -1)
@@ -129,8 +131,8 @@ namespace Projeto_DS_Condominio.Repository
                         Morador morador = new Morador();
                         morador.Id = (int)reader[0];
                         morador.Nome = reader[1].ToString();
-                        morador.Rg = reader[2].ToString();
-                        morador.Cpf = reader[3].ToString();
+                        morador.Rg.Digitos = reader[2].ToString();
+                        morador.Cpf.Digitos = reader[3].ToString();
 
                         BlocoEnum blocoLido;
                         Enum.TryParse<BlocoEnum>(reader[4].ToString(), out blocoLido);

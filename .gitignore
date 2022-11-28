@@ -1,0 +1,6 @@
+# Configuração do Visual Studio (arquivos abertos, breakpoints, ...)
+.vs
+
+# Resultados de compilação
+Projeto_DS_Condominio/[Oo]bj
+Projeto_DS_Condominio/[Bb]in

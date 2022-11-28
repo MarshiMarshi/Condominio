@@ -13,8 +13,8 @@ namespace Projeto_DS_Condominio.Model
     {
         private int _id;
         private string _nome;
-        private string _rg;
-        private string _cpf;
+        private Rg _rg;
+        private Cpf _cpf;
         private BlocoEnum _bloco;
         private int _apartamento;
 
@@ -24,11 +24,11 @@ namespace Projeto_DS_Condominio.Model
         [StringLength(30, ErrorMessage = "O nome deve ter no máximo 30 caracteres")]
         public string Nome { get => _nome; set => _nome = value; }
         [DisplayName("RG")]
-        [StringLength(9, ErrorMessage = "O RG está incompleto")]
-        public string Rg { get => _rg; set => _rg = value; }
+        [StringLength(9, MinimumLength = 9, ErrorMessage = "O RG está incompleto")]
+        public Rg Rg { get => _rg; set => _rg = value; }
         [DisplayName("CPF")]
-        [StringLength(11, ErrorMessage = "O CPF está incompleto")]
-        public string Cpf { get => _cpf; set => _cpf = value; }
+        [StringLength(11, MinimumLength = 11, ErrorMessage = "O CPF está incompleto")]
+        public Cpf Cpf { get => _cpf; set => _cpf = value; }
         [DisplayName("Bloco")]
         [Required(ErrorMessage = "O bloco do morador é obrigatório")]
         public BlocoEnum Bloco { get => _bloco; set => _bloco = value; }

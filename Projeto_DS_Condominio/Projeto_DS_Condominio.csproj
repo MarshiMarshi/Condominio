@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -58,10 +59,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Cpf.cs" />
     <Compile Include="Model\DescricaoAusente.cs" />
     <Compile Include="Model\DescricaoDevolutiva.cs" />
     <Compile Include="Model\Morador.cs" />
     <Compile Include="Model\Encomenda.cs" />
+    <Compile Include="Model\NumeroFormatavel.cs" />
+    <Compile Include="Model\Rg.cs" />
     <Compile Include="Presenter\MainPresenter.cs" />
     <Compile Include="Presenter\MoradorPresenter.cs" />
     <Compile Include="Presenter\EncomendaPresenter.cs" />
@@ -108,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmMainView.resx">
       <DependentUpon>frmMainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmMoradorView.resx">
+      <DependentUpon>frmMoradorView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

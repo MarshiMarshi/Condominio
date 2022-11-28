@@ -131,6 +131,7 @@ namespace Projeto_DS_Condominio.View
             // 
             // cmbBlocoPesquisa
             // 
+            this.cmbBlocoPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBlocoPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBlocoPesquisa.FormattingEnabled = true;
             this.cmbBlocoPesquisa.Location = new System.Drawing.Point(323, 91);
@@ -395,6 +396,7 @@ namespace Projeto_DS_Condominio.View
             // 
             // cmbBloco
             // 
+            this.cmbBloco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBloco.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBloco.FormattingEnabled = true;
             this.cmbBloco.Location = new System.Drawing.Point(60, 104);

@@ -71,6 +71,30 @@ namespace Projeto_DS_Condominio.View
             set { txtNomePesquisa.Text = value; }
         }
 
+        public string CpfPesquisa
+        {
+            get { return mtxCPFPesquisa.Text; }
+            set { value = mtxCPFPesquisa.Text; }
+        }
+
+        public string RgPesquisa
+        {
+            get { return mtxRGPesquisa.Text; }
+            set { value = mtxRGPesquisa.Text; }
+        }
+
+        public string BlocoPesquisa
+        {
+            get { return cmbBlocoPesquisa.Text; }
+            set { value = cmbBlocoPesquisa.Text; }
+        }
+
+        public string ApartamentoPesquisa
+        {
+            get { return txtApartamentoPesquisa.Text; }
+            set { value = txtApartamentoPesquisa.Text; }
+        }
+
         public bool IsEditing
         {
             get { return isEditing; }
@@ -114,11 +138,6 @@ namespace Projeto_DS_Condominio.View
         public event EventHandler DeleteEvent;
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 
