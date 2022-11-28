@@ -37,7 +37,16 @@ namespace Projeto_DS_Condominio.Repository
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            List<Morador> moradorList = new List<Morador>();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "delete from Morador where id_morador = @id";
+                command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                command.ExecuteNonQuery();
+            }
         }
 
         public void Editar(Morador morador)
