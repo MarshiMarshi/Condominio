@@ -92,7 +92,7 @@ namespace Projeto_DS_Condominio.View
 
         public void SetEncomendaListBindingSourc(BindingSource encomendaList)
         {
-            pnlEncomendas.DataSourc = encomendaList;
+            //pnlEncomendas.DataSourc = encomendaList;
         }
     }
 }
