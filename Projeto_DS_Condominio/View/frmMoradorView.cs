@@ -74,25 +74,25 @@ namespace Projeto_DS_Condominio.View
         public string CpfPesquisa
         {
             get { return mtxCPFPesquisa.Text; }
-            set { value = mtxCPFPesquisa.Text; }
+            set { mtxCPFPesquisa.Text = value; }
         }
 
         public string RgPesquisa
         {
             get { return mtxRGPesquisa.Text; }
-            set { value = mtxRGPesquisa.Text; }
+            set { mtxRGPesquisa.Text = value; }
         }
 
         public string BlocoPesquisa
         {
             get { return cmbBlocoPesquisa.Text; }
-            set { value = cmbBlocoPesquisa.Text; }
+            set { cmbBlocoPesquisa.Text = value; }
         }
 
         public string ApartamentoPesquisa
         {
             get { return txtApartamentoPesquisa.Text; }
-            set { value = txtApartamentoPesquisa.Text; }
+            set { txtApartamentoPesquisa.Text = value; }
         }
 
         public string NomeEdicao
@@ -104,25 +104,25 @@ namespace Projeto_DS_Condominio.View
         public string CpfEdicao
         {
             get { return mtxCPFEdicao.Text; }
-            set { value = mtxCPFEdicao.Text; }
+            set { mtxCPFEdicao.Text = value; }
         }
 
         public string RgEdicao
         {
             get { return mtxRGEdicao.Text; }
-            set { value = mtxRGEdicao.Text; }
+            set { mtxRGEdicao.Text = value; }
         }
 
         public string BlocoEdicao
         {
             get { return cmbBlocoEdicao.Text; }
-            set { value = cmbBlocoEdicao.Text; }
+            set { cmbBlocoEdicao.Text = value; }
         }
 
         public string ApartamentoEdicao
         {
             get { return txtApartamentoEdicao.Text; }
-            set { value = txtApartamentoEdicao.Text; }
+            set { txtApartamentoEdicao.Text = value; }
         }
 
         public bool IsEditing
