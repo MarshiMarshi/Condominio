@@ -42,7 +42,21 @@ namespace Projeto_DS_Condominio.Repository
 
         public void Editar(Morador morador)
         {
-            throw new NotImplementedException();
+            List<Morador> moradorList = new List<Morador>();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "update Morador set nome_morador = @nome, rg_morador = @rg, cpf_morador = @cpf, bloco_morador = @bloco, apartamento = @apartamento where id_morador = @id";
+                command.Parameters.Add("@id", SqlDbType.Int).Value = morador.Id;
+                command.Parameters.Add("@nome", SqlDbType.VarChar).Value = morador.Nome;
+                command.Parameters.Add("@rg", SqlDbType.Char).Value = morador.Rg.ToDigitsString();
+                command.Parameters.Add("@cpf", SqlDbType.Char).Value = morador.Cpf.ToDigitsString();
+                command.Parameters.Add("@apartamento", SqlDbType.Int).Value = morador.Apartamento;
+                command.Parameters.Add("@bloco", SqlDbType.VarChar).Value = morador.Bloco;
+                command.ExecuteNonQuery();
+            }
         }
 
         public IEnumerable<Morador> GetAll()
