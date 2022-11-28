@@ -10,6 +10,7 @@ namespace Projeto_DS_Condominio.View
 {
     public interface IEncomendaView
     {
+        // Campos/Propriedades
         string NomeDestinatario { get; set; }
         BlocoEnum Bloco { get; set; }
         string Apartamento { get; set; }
@@ -29,12 +30,15 @@ namespace Projeto_DS_Condominio.View
         StatusEncomendaEnum StatusPesquisa { get; set; }
 
         
-        event EventHandler EditEvent;
+        // Eventos
+        event EventHandler EditEvent; /////////////////
         event EventHandler SaveEvent;
         event EventHandler CancelEvent;
         event EventHandler CleanTextsEvent;
         event EventHandler SearchEvent;
 
+
+        // Métodos
         void SetEncomendaBindingSource(BindingSource encomendaList);
         void Show();
     }

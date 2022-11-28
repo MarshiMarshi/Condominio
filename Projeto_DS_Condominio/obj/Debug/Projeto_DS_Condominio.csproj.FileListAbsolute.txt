@@ -9,3 +9,4 @@ C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condomin
 C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.pdb
 C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.View.frmEncomendaView.resources
 C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.View.frmMainView.resources
+C:\Users\Marsh\Documents\Programação\C ou C#\Visual Studio\Projeto_DS_Condominio\Projeto_DS_Condominio\obj\Debug\Projeto_DS_Condominio.View.frmMoradorView.resources

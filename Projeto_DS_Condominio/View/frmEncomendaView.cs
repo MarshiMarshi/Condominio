@@ -27,6 +27,8 @@ namespace Projeto_DS_Condominio.View
             btnPesquisar.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
         }
 
+
+        // Propriedades
         public string NomeDestinatario {
             get { return txtNomeDestinatario.Text; }
             set { txtNomeDestinatario.Text = value; }
@@ -109,7 +111,7 @@ namespace Projeto_DS_Condominio.View
         }
 
         private static frmEncomendaView instance;
-        public static frmEncomendaView GetInstance(Form parentContainer)
+        internal static frmEncomendaView GetInstance(Form parentContainer)
         {
             if (instance == null || instance.IsDisposed)
             {
