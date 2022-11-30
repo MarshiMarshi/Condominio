@@ -25,9 +25,10 @@ namespace Projeto_DS_Condominio.Presenter
 
             this.view.PesquisaEvent += PesquisaMorador;
             this.view.AdicionaEvent += AdicionaMorador;
-            this.view.EditaEvent += CarregaMoradorSelecionado;
+            this.view.CarregaEvent += CarregaMoradorSelecionado;
+            this.view.EditaEvent += EditaMorador;
             this.view.DeleteEvent += ExcluiMoradorSelecionado;
-            this.view.SalvaEvent += SalvaMorador;
+            this.view.SalvaEvent += AdicionaMorador;
             this.view.CancelaEvent += CancelaAcao;
             this.view.SetEncomendaListBindingSource(moradoresBindingSource);
 
@@ -43,18 +44,27 @@ namespace Projeto_DS_Condominio.Presenter
 
         private void PesquisaMorador(object sender, EventArgs e)
         {
-            moradorList = repository.GetByValor(this.view.Nome, this.view.Rg, this.view.Cpf, this.view.Apartamento, this.view.Bloco);
+            moradorList = repository.GetByValor(this.view.NomePesquisa, this.view.RgPesquisa, this.view.CpfPesquisa, this.view.ApartamentoPesquisa, this.view.BlocoPesquisa);
             moradoresBindingSource.DataSource = moradorList;
         }
         
-        private void AdicionaMorador(object sender, EventArgs e)
+        private void EditarMorador(object sender, EventArgs e)
         {
             view.IsEditing = false;
         }
 
         private void CarregaMoradorSelecionado(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (moradoresBindingSource.Current == null)
+                return;
+            view.IsEditing = true;
+            view.GuiaSelecionada = 1;
+            Morador morador = (Morador)moradoresBindingSource.Current;
+            view.NomeEdicao = morador.Nome;
+            view.CpfEdicao = morador.Cpf.ToFormattedString();
+            view.RgEdicao = morador.Rg.ToFormattedString();
+            view.BlocoEdicao = morador.Bloco.ToString();
+            view.ApartamentoEdicao = morador.Apartamento.ToString();
         }
 
         private void ExcluiMoradorSelecionado(object sender, EventArgs e)
@@ -62,36 +72,21 @@ namespace Projeto_DS_Condominio.Presenter
             throw new NotImplementedException();
         }
 
-        private void SalvaMorador(object sender, EventArgs e)
+        private void AdicionaMorador(object sender, EventArgs e)
         {
             Morador morador = new Morador();
             try
             {
                 //new System.Data.Common.ModelDataValidation().Validate(morador);
-                if (view.IsEditing)
-                {
-                    morador.Nome = view.NomeEdicao;
-                    morador.Rg = new Rg(view.RgEdicao);
-                    morador.Cpf = new Cpf(view.CpfEdicao);
-                    BlocoEnum blocoLido;
-                    Enum.TryParse<BlocoEnum>(view.BlocoEdicao.ToString(), out blocoLido);
-                    morador.Bloco = blocoLido;
-                    morador.Apartamento = Convert.ToInt32(view.ApartamentoEdicao);
-                    repository.Editar(morador);
-                    view.Mensagem = "Morador editado com sucesso";
-                }
-                else //Add new model
-                {
-                    morador.Nome = view.Nome;
-                    morador.Rg = new Rg(view.Rg);
-                    morador.Cpf = new Cpf(view.Cpf);
-                    BlocoEnum blocoLido;
-                    Enum.TryParse<BlocoEnum>(view.Bloco.ToString(), out blocoLido);
-                    morador.Bloco = blocoLido;
-                    morador.Apartamento = Convert.ToInt32(view.Apartamento);
-                    repository.Adicionar(morador);
-                    view.Mensagem = "Morador adicionado com sucesso";
-                }
+                morador.Nome = view.Nome;
+                morador.Rg = new Rg(view.Rg);
+                morador.Cpf = new Cpf(view.Cpf);
+                BlocoEnum blocoLido;
+                Enum.TryParse<BlocoEnum>(view.Bloco.ToString(), out blocoLido);
+                morador.Bloco = blocoLido;
+                morador.Apartamento = Convert.ToInt32(view.Apartamento);
+                repository.Adicionar(morador);
+                view.Mensagem = "Morador adicionado com sucesso";
                 view.IsSuccessful = true;
                 CarregarTodosMoradores();
                 CleanViewFields();
@@ -99,12 +94,40 @@ namespace Projeto_DS_Condominio.Presenter
             catch (Exception ex)
             {
                 view.IsSuccessful = false;
-                view.Mensagem = ex.Message;
+                view.Mensagem = "Erro ao adicionar morador, verifique os dados";
+            }
+        }
+
+        private void EditaMorador(object sender, EventArgs e)
+        {
+            Morador morador = new Morador();
+            try
+            {
+                //new System.Data.Common.ModelDataValidation().Validate(morador);
+                morador.Id = view.Id;
+                morador.Nome = view.NomeEdicao;
+                morador.Rg = new Rg(view.RgEdicao);
+                morador.Cpf = new Cpf(view.CpfEdicao);
+                BlocoEnum blocoLido;
+                Enum.TryParse<BlocoEnum>(view.BlocoEdicao.ToString(), out blocoLido);
+                morador.Bloco = blocoLido;
+                morador.Apartamento = Convert.ToInt32(view.ApartamentoEdicao);
+                repository.Editar(morador);
+                view.Mensagem = "Morador editado com sucesso";
+                view.IsSuccessful = true;
+                CarregarTodosMoradores();
+                CleanViewFields();
+            }
+            catch (Exception ex)
+            {
+                view.IsSuccessful = false;
+                view.Mensagem = "Erro ao editar morador, verifique os dados";
             }
         }
 
         private void CancelaAcao(object sender, EventArgs e)
         {
+            this.view.GuiaSelecionada = 0;
             CleanViewFields();
         }
 
@@ -119,6 +142,10 @@ namespace Projeto_DS_Condominio.Presenter
             this.view.RgPesquisa = "";
             this.view.CpfPesquisa = "";
             this.view.ApartamentoPesquisa = "";
+            this.view.NomeEdicao = "";
+            this.view.RgEdicao = "";
+            this.view.CpfEdicao = "";
+            this.view.ApartamentoEdicao = "";
         }
     }
 }

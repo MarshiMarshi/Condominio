@@ -59,6 +59,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Cpf.cs" />
+    <Compile Include="Model\DataEventArgs.cs" />
     <Compile Include="Model\DescricaoAusente.cs" />
     <Compile Include="Model\DescricaoDevolutiva.cs" />
     <Compile Include="Model\Morador.cs" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_DS_Condominio.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,13 +32,16 @@ namespace Projeto_DS_Condominio.View
         bool IsSuccessful { get; set; }
         bool IsSearching { get; set; }
         string Mensagem { get; set; }
+        int GuiaSelecionada { get; set; }
+        int Id { get; set; }
 
         event EventHandler PesquisaEvent;
         event EventHandler AdicionaEvent;
-        event EventHandler EditaEvent;
+        event EventHandler CarregaEvent;
         event EventHandler DeleteEvent;
         event EventHandler SalvaEvent;
         event EventHandler CancelaEvent;
+        event EventHandler EditaEvent;
 
         void SetEncomendaListBindingSource(BindingSource moradorList);
         void Show();

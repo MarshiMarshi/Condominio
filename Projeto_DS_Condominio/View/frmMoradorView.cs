@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_DS_Condominio.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,15 +16,20 @@ namespace Projeto_DS_Condominio.View
         public frmMoradorView()
         {
             InitializeComponent();
-            tabCRUD.TabPages.Remove(tpUpdate);
+            guiaSalva = tpCreate;
+            //tabCRUD.TabPages.Remove(tpUpdate);
+            AssociateAndRaiseViewEvents();
         }
 
         private bool isSuccessful;
         private bool isEditing;
         private bool isSearching;
         private string mensagem;
+        private TabPage guiaSalva;
+        int id;
 
         private static frmMoradorView instance;
+
         private void AssociateAndRaiseViewEvents()
         {
             btnPesquisar.Click += delegate { PesquisaEvent?.Invoke(this, EventArgs.Empty); };
@@ -32,18 +38,35 @@ namespace Projeto_DS_Condominio.View
                 if (e.KeyCode == Keys.Enter)
                     PesquisaEvent?.Invoke(this, EventArgs.Empty);
             };
-            btnSalvar.Click += delegate { SalvaEvent?.Invoke(this, EventArgs.Empty); };
-            btnLimpar.Click += delegate { CancelaEvent?.Invoke(this, EventArgs.Empty); };
-            
-            btnSalvar.Click += delegate
-            {
+            btnSalvar.Click += delegate {
                 SalvaEvent?.Invoke(this, EventArgs.Empty);
+            };
+            btnLimpar.Click += delegate { CancelaEvent?.Invoke(this, EventArgs.Empty); };
+            dgvMoradores.SelectionChanged += delegate {
+                Id = (int)dgvMoradores.Rows[dgvMoradores.CurrentCell.RowIndex].Cells[0].Value;
+                //if (!tabCRUD.Contains(tpUpdate))
+                //tabCRUD.TabPages.Add(tpUpdate);
+                CarregaEvent?.Invoke(this, EventArgs.Empty);
+            };
+            
+            btnEditar.Click += delegate
+            {
+                DataEventArgs e = new DataEventArgs();
+                EditaEvent?.Invoke(this, e);
                 if (isSuccessful)
                 {
-                    tabCRUD.TabPages.Remove(tpCreate);
-                    tabCRUD.TabPages.Add(tpUpdate);
+                    guiaSalva = tpCreate;
+                    //tabCRUD.TabPages.Remove(tpCreate);
+                    //tabCRUD.TabPages.Add(tpUpdate);
                 }
                 MessageBox.Show(mensagem);
+            };
+
+            btnCancelar.Click += delegate
+            {
+                CancelaEvent?.Invoke(this, EventArgs.Empty);
+                //tabCRUD.TabPages.Remove(tpUpdate);
+                //tabCRUD.TabPages.Add(guiaSalva);
             };
         }
 
@@ -160,6 +183,22 @@ namespace Projeto_DS_Condominio.View
             get { return mensagem; }
             set { mensagem = value; }
         }
+        public int GuiaSelecionada
+        {
+            get { return tabCRUD.SelectedIndex; }
+            set { tabCRUD.SelectedIndex = value; }
+        }
+
+        public TabPage GuiaSalva
+        {
+            get { return guiaSalva; }
+            set { guiaSalva = value; }
+        }
+
+        public int Id {
+            get { return id; }
+            set { id = value; }
+        }
 
         internal static frmMoradorView GetInstance(frmMainView mainView)
         {
@@ -182,10 +221,11 @@ namespace Projeto_DS_Condominio.View
         
         public event EventHandler PesquisaEvent;
         public event EventHandler AdicionaEvent;
-        public event EventHandler EditaEvent;
+        public event EventHandler CarregaEvent;
         public event EventHandler SalvaEvent;
         public event EventHandler CancelaEvent;
         public event EventHandler DeleteEvent;
+        public event EventHandler EditaEvent;
 
         public void SetEncomendaListBindingSource(BindingSource moradorList)
         {

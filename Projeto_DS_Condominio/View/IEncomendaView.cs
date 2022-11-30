@@ -15,7 +15,7 @@ namespace Projeto_DS_Condominio.View
         String Armazenamento { get; set; }
         String DataChegada { get; set; }
         String DataEntrega { get; set; }
-        String Destinatario { get; set; }
+        String NomeDestinatario { get; set; }
         String DescricaoAusente { get; set; }
         String DescricaoDevolutiva { get; set; }
 
@@ -23,6 +23,7 @@ namespace Projeto_DS_Condominio.View
         bool Editar { get; set; }
         bool Concluido { get; set; }
         String Mensagem { get; set; }
+        int GuiaSelecionada { get; set; }
 
         //Events
         event EventHandler SalvarEvent;

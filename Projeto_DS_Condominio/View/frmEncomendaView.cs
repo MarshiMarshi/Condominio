@@ -15,14 +15,43 @@ namespace Projeto_DS_Condominio.View
         public FrmEncomendaView()
         {
             InitializeComponent();
+            AssociateAndRaiseViewEvents();
+        }
+
+        private void AssociateAndRaiseViewEvents()
+        {
+            btnPesquisar.Click += delegate { PesquisarEvent?.Invoke(this, EventArgs.Empty); };
+            btnSalvar.Click += delegate { SalvarEvent?.Invoke(this, EventArgs.Empty); };
+            btnLimpar.Click += delegate { CancelarEvent?.Invoke(this, EventArgs.Empty); };
+            btnEditar.Click += delegate { EditarEvent?.Invoke(this, EventArgs.Empty); };
+            btnSalvar.Click += delegate
+            {
+                SalvarEvent?.Invoke(this, EventArgs.Empty);
+                if (isSuccessful)
+                {
+                    //tabCRUD.TabPages.Remove(tpCreate);
+                    //tabCRUD.TabPages.Add(tpUpdate);
+                }
+                MessageBox.Show(mensagem);
+            };
+
+            btnCancelar.Click += delegate
+            {
+                CancelarEvent?.Invoke(this, EventArgs.Empty);
+                //tabCRUD.TabPages.Remove(tpUpdate);
+                //tabCRUD.TabPages.Add(tpCreate);
+            };
         }
 
         private static FrmEncomendaView instance;
+        string id;
+        private bool isSuccessful;
+        private string mensagem;
 
         public string Id 
-        { 
-            get => throw new NotImplementedException(); 
-            set => throw new NotImplementedException(); 
+        {
+            get { return id; }
+            set { id = value; }
         }
 
         public string Status
@@ -32,27 +61,39 @@ namespace Projeto_DS_Condominio.View
         }
 
         public string Armazenamento 
-        { 
-            get => throw new NotImplementedException();
-            set => throw new NotImplementedException(); 
+        {
+            get { return cmbLocalArmazem.Text; }
+            set { cmbLocalArmazem.Text = value; }
         }
 
         public string DataChegada 
         {
-            get => throw new NotImplementedException(); 
-            set => throw new NotImplementedException(); 
+            get { return mtxDataChegada.Text; }
+            set { mtxDataChegada.Text = value; }
         }
 
         public string DataEntrega 
         { 
+            get { return mtxDataEntrega.Text; }
+            set { mtxDataEntrega.Text = value; }
+        }
+
+        public string NomeDestinatario
+        {
+            get { return txtNomeDestinatario.Text; }
+            set { txtNomeDestinatario.Text = value; }
+        }
+
+        public string BlocoDestinatario
+        {
             get => throw new NotImplementedException();
             set => throw new NotImplementedException();
         }
 
-        public string Destinatario
-        { 
+        public string ApartamentoDestinatario
+        {
             get => throw new NotImplementedException();
-            set => throw new NotImplementedException(); 
+            set => throw new NotImplementedException();
         }
 
         public string DescricaoAusente 
@@ -86,6 +127,13 @@ namespace Projeto_DS_Condominio.View
             get => throw new NotImplementedException();
             set => throw new NotImplementedException(); 
         }
+        public int GuiaSelecionada
+        {
+            get { return tabCRUD.SelectedIndex; }
+            set { tabCRUD.SelectedIndex = value; }
+        }
+
+        public event EventHandler CancelarEvent;
 
         public event EventHandler SalvarEvent;
         public event EventHandler limparEvent;

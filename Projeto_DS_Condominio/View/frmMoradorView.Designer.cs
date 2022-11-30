@@ -377,6 +377,10 @@ namespace Projeto_DS_Condominio.View
             this.cmbBlocoEdicao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBlocoEdicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBlocoEdicao.FormattingEnabled = true;
+            this.cmbBlocoEdicao.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C"});
             this.cmbBlocoEdicao.Location = new System.Drawing.Point(60, 104);
             this.cmbBlocoEdicao.Name = "cmbBlocoEdicao";
             this.cmbBlocoEdicao.Size = new System.Drawing.Size(59, 21);

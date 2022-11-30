@@ -87,6 +87,7 @@ namespace Projeto_DS_Condominio.View
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.pnlEncomendas = new System.Windows.Forms.Panel();
             this.dgvEncomendas = new System.Windows.Forms.DataGridView();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.tabCRUD.SuspendLayout();
             this.tpCreate.SuspendLayout();
             this.grpDestinatario.SuspendLayout();
@@ -105,7 +106,6 @@ namespace Projeto_DS_Condominio.View
             this.tabCRUD.Controls.Add(this.tpCreate);
             this.tabCRUD.Controls.Add(this.tpUpdate);
             this.tabCRUD.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tabCRUD.Enabled = false;
             this.tabCRUD.Location = new System.Drawing.Point(0, 0);
             this.tabCRUD.Name = "tabCRUD";
             this.tabCRUD.SelectedIndex = 0;
@@ -183,6 +183,10 @@ namespace Projeto_DS_Condominio.View
             // 
             this.cmbBloco.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBloco.FormattingEnabled = true;
+            this.cmbBloco.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C"});
             this.cmbBloco.Location = new System.Drawing.Point(52, 79);
             this.cmbBloco.Name = "cmbBloco";
             this.cmbBloco.Size = new System.Drawing.Size(59, 21);
@@ -263,6 +267,9 @@ namespace Projeto_DS_Condominio.View
             // 
             this.cmbMotivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMotivo.FormattingEnabled = true;
+            this.cmbMotivo.Items.AddRange(new object[] {
+            "AUSENTE",
+            "FALECIDO"});
             this.cmbMotivo.Location = new System.Drawing.Point(56, 26);
             this.cmbMotivo.Name = "cmbMotivo";
             this.cmbMotivo.Size = new System.Drawing.Size(162, 21);
@@ -322,6 +329,12 @@ namespace Projeto_DS_Condominio.View
             // 
             this.cmbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "PENDENTE",
+            "ENTREGUE",
+            "ATRASADO",
+            "DEVOLVIDO",
+            "AUSENTE"});
             this.cmbStatus.Location = new System.Drawing.Point(55, 94);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(166, 21);
@@ -361,6 +374,9 @@ namespace Projeto_DS_Condominio.View
             // 
             this.cmbLocalArmazem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLocalArmazem.FormattingEnabled = true;
+            this.cmbLocalArmazem.Items.AddRange(new object[] {
+            "GUARITA",
+            "ARMAZEM"});
             this.cmbLocalArmazem.Location = new System.Drawing.Point(145, 32);
             this.cmbLocalArmazem.Name = "cmbLocalArmazem";
             this.cmbLocalArmazem.Size = new System.Drawing.Size(76, 21);
@@ -369,6 +385,7 @@ namespace Projeto_DS_Condominio.View
             // tpUpdate
             // 
             this.tpUpdate.BackColor = System.Drawing.Color.White;
+            this.tpUpdate.Controls.Add(this.btnEditar);
             this.tpUpdate.Controls.Add(this.groupBox1);
             this.tpUpdate.Controls.Add(this.groupBox2);
             this.tpUpdate.Controls.Add(this.btnCancelar);
@@ -603,9 +620,9 @@ namespace Projeto_DS_Condominio.View
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(6, 442);
+            this.btnCancelar.Location = new System.Drawing.Point(3, 444);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(121, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(247, 23);
             this.btnCancelar.TabIndex = 32;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -623,6 +640,12 @@ namespace Projeto_DS_Condominio.View
             // cmbStatusPesquisa
             // 
             this.cmbStatusPesquisa.FormattingEnabled = true;
+            this.cmbStatusPesquisa.Items.AddRange(new object[] {
+            "PENDENTE",
+            "ENTREGUE",
+            "ATRASADO",
+            "DEVOLVIDO",
+            "AUSENTE"});
             this.cmbStatusPesquisa.Location = new System.Drawing.Point(323, 91);
             this.cmbStatusPesquisa.Name = "cmbStatusPesquisa";
             this.cmbStatusPesquisa.Size = new System.Drawing.Size(116, 21);
@@ -712,6 +735,15 @@ namespace Projeto_DS_Condominio.View
             this.dgvEncomendas.Size = new System.Drawing.Size(503, 340);
             this.dgvEncomendas.TabIndex = 0;
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(3, 416);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(247, 23);
+            this.btnEditar.TabIndex = 35;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
             // FrmEncomendaView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -728,7 +760,7 @@ namespace Projeto_DS_Condominio.View
             this.Controls.Add(this.txtNomeDestinatarioPesquisa);
             this.Controls.Add(this.pnlEncomendas);
             this.Controls.Add(this.tabCRUD);
-            this.MinimumSize = new System.Drawing.Size(816, 0);
+            this.MinimumSize = new System.Drawing.Size(816, 39);
             this.Name = "FrmEncomendaView";
             this.Text = "Encomenda";
             this.tabCRUD.ResumeLayout(false);
@@ -812,5 +844,6 @@ namespace Projeto_DS_Condominio.View
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Panel pnlEncomendas;
         private System.Windows.Forms.DataGridView dgvEncomendas;
+        private System.Windows.Forms.Button btnEditar;
     }
 }
