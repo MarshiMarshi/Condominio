@@ -17,6 +17,8 @@ namespace Projeto_DS_Condominio.View
             InitializeComponent();
         }
 
+        private static FrmEncomendaView instance;
+
         public string Id 
         { 
             get => throw new NotImplementedException(); 
@@ -89,6 +91,25 @@ namespace Projeto_DS_Condominio.View
         public event EventHandler limparEvent;
         public event EventHandler EditarEvent;
         public event EventHandler PesquisarEvent;
+
+        internal static FrmEncomendaView GetInstance(frmMainView mainView)
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new FrmEncomendaView();
+                instance.MdiParent = mainView;
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
+                instance.Show();
+            }
+            else
+            {
+                if (instance.WindowState == FormWindowState.Minimized)
+                    instance.WindowState = FormWindowState.Normal;
+                instance.BringToFront();
+            }
+            return instance;
+        }
 
         public void SetEncomendaListBindingSourc(BindingSource encomendaList)
         {
