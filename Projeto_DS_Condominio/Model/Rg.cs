@@ -19,6 +19,7 @@ namespace Projeto_DS_Condominio.Model
             }
         }
 
+        public override string ToString() => ToFormattedString();
         public override String ToDigitsString() => this.digitos;
         public override String ToFormattedString() => digitos.Insert(2, ".").Insert(6, ".").Insert(10, "-");
 

@@ -21,27 +21,31 @@ namespace Projeto_DS_Condominio.Model
         private DescricaoDevolutiva _descricaoDevolutiva;
 
 
-        [DisplayName("Encomenda Id")]
+        [DisplayName("Id")]
         public int Id { get => _id; set => _id = value; }
 
-        [DisplayName("Status Encomenda")]
+        [DisplayName("Status")]
         [Required(ErrorMessage = "Necessario Status")]
         public StatusEncomendaEnum Status { get => _status; set => _status = value; }
 
         [DisplayName("Local de Aramazenamento")]
         public LocalArmazenamentoEnum Armazenamento { get => _armazenamento; set => _armazenamento = value; }
 
-        [DisplayName("Data de recebimento da Encomenda")]
+        [DisplayName("Data de recebimento")]
         [Required(ErrorMessage = "Necessario data de recebimento")]
         public DateTime DataChegada { get => _dataChegada; set => _dataChegada = value; }
 
         [DisplayName("Data de entrega")]
         public DateTime DataEntrega { get => _dataEntrega; set => _dataEntrega = value; }
 
-        [DisplayName("Dono da Encomenda")]
+        [DisplayName("Destinatário")]
         [Required(ErrorMessage = "Necessario nome do destinatario")]
         public Morador Destinatario { get => _destinatario; set => _destinatario = value; }
+
+        [DisplayName("Descrição Ausente")]
         public DescricaoAusente DescricaoAusente { get => _descricaoAusente; set => _descricaoAusente = value; }
+
+        [DisplayName("Descrição Devolutiva")]
         public DescricaoDevolutiva DescricaoDevolutiva { get => _descricaoDevolutiva; set => _descricaoDevolutiva = value; }
     }
 }

@@ -14,23 +14,24 @@ namespace Projeto_DS_Condominio.Presenter
     {
         public IEncomendaView view;
         public IEncomendaRepository repository;
-        private BindingSource encomendasbindingSource;
+        private BindingSource encomendasBindingSource;
         private IEnumerable<Encomenda> encomendaList;
         
         public EncomendaPresenter(IEncomendaView view, IEncomendaRepository repository)
         {
-            this.encomendasbindingSource = new BindingSource();
+            this.encomendasBindingSource = new BindingSource();
             this.view = view;
             this.repository = repository;
 
-            SetBindingSource(encomendasbindingSource);
+            this.view.SetEncomendaListBindingSource(encomendasBindingSource);
+            CarregarTodasEncomendas();
             this.view.Show();
         }
 
-        private void SetBindingSource(BindingSource moradoresBindingSource)
+        private void CarregarTodasEncomendas()
         {
             encomendaList = repository.GetAll();
-            moradoresBindingSource.DataSource = encomendaList;
+            encomendasBindingSource.DataSource = encomendaList;
         }
     }
 }

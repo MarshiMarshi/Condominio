@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Projeto_DS_Condominio.View;
 using Projeto_DS_Condominio.Model;
 using System.Windows.Forms;
+using Projeto_DS_Condominio.Enums;
 
 namespace Projeto_DS_Condominio.Presenter
 {
@@ -28,32 +29,27 @@ namespace Projeto_DS_Condominio.Presenter
             this.view.DeleteEvent += ExcluiMoradorSelecionado;
             this.view.SalvaEvent += SalvaMorador;
             this.view.CancelaEvent += CancelaAcao;
-            this.SetBindingSource(moradoresBindingSource);
+            this.view.SetEncomendaListBindingSource(moradoresBindingSource);
 
             this.CarregarTodosMoradores();
             this.view.Show();
         }
 
-        private void SetBindingSource(BindingSource moradoresBindingSource)
+        private void CarregarTodosMoradores()
         {
             moradorList = repository.GetAll();
             moradoresBindingSource.DataSource = moradorList;
         }
 
-        private void CarregarTodosMoradores()
+        private void PesquisaMorador(object sender, EventArgs e)
         {
             moradorList = repository.GetByValor(this.view.Nome, this.view.Rg, this.view.Cpf, this.view.Apartamento, this.view.Bloco);
             moradoresBindingSource.DataSource = moradorList;
         }
-
-        private void PesquisaMorador(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
+        
         private void AdicionaMorador(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            view.IsEditing = false;
         }
 
         private void CarregaMoradorSelecionado(object sender, EventArgs e)
@@ -68,12 +64,48 @@ namespace Projeto_DS_Condominio.Presenter
 
         private void SalvaMorador(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Morador morador = new Morador();
+            try
+            {
+                //new System.Data.Common.ModelDataValidation().Validate(morador);
+                if (view.IsEditing)
+                {
+                    morador.Nome = view.NomeEdicao;
+                    morador.Rg = new Rg(view.RgEdicao);
+                    morador.Cpf = new Cpf(view.CpfEdicao);
+                    BlocoEnum blocoLido;
+                    Enum.TryParse<BlocoEnum>(view.BlocoEdicao.ToString(), out blocoLido);
+                    morador.Bloco = blocoLido;
+                    morador.Apartamento = Convert.ToInt32(view.ApartamentoEdicao);
+                    repository.Editar(morador);
+                    view.Mensagem = "Morador editado com sucesso";
+                }
+                else //Add new model
+                {
+                    morador.Nome = view.Nome;
+                    morador.Rg = new Rg(view.Rg);
+                    morador.Cpf = new Cpf(view.Cpf);
+                    BlocoEnum blocoLido;
+                    Enum.TryParse<BlocoEnum>(view.Bloco.ToString(), out blocoLido);
+                    morador.Bloco = blocoLido;
+                    morador.Apartamento = Convert.ToInt32(view.Apartamento);
+                    repository.Adicionar(morador);
+                    view.Mensagem = "Morador adicionado com sucesso";
+                }
+                view.IsSuccessful = true;
+                CarregarTodosMoradores();
+                CleanViewFields();
+            }
+            catch (Exception ex)
+            {
+                view.IsSuccessful = false;
+                view.Mensagem = ex.Message;
+            }
         }
 
         private void CancelaAcao(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            CleanViewFields();
         }
 
         public void CleanViewFields()
@@ -83,11 +115,10 @@ namespace Projeto_DS_Condominio.Presenter
             this.view.Cpf = "";
             this.view.Bloco = "";
             this.view.Apartamento = "";
-        }
-        
-        public void CancelAction(Object sender, EventArgs e)
-        {
-            CleanViewFields();
+            this.view.NomePesquisa = "";
+            this.view.RgPesquisa = "";
+            this.view.CpfPesquisa = "";
+            this.view.ApartamentoPesquisa = "";
         }
     }
 }

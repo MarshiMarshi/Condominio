@@ -14,10 +14,23 @@ namespace Projeto_DS_Condominio.View
         string Cpf { get; set; }
         string Bloco { get; set; }
         string Apartamento { get; set; }
-        
+
+        string NomeEdicao { get; set; }
+        string RgEdicao { get; set; }
+        string CpfEdicao { get; set; }
+        string BlocoEdicao { get; set; }
+        string ApartamentoEdicao { get; set; }
+
+        string NomePesquisa { get; set; }
+        string RgPesquisa { get; set; }
+        string CpfPesquisa { get; set; }
+        string BlocoPesquisa { get; set; }
+        string ApartamentoPesquisa { get; set; }
+
         bool IsEditing { get; set; }
-        bool IsSucessful { get; set; }
+        bool IsSuccessful { get; set; }
         bool IsSearching { get; set; }
+        string Mensagem { get; set; }
 
         event EventHandler PesquisaEvent;
         event EventHandler AdicionaEvent;

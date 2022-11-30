@@ -699,6 +699,8 @@ namespace Projeto_DS_Condominio.View
             // 
             // dgvEncomendas
             // 
+            this.dgvEncomendas.AllowUserToAddRows = false;
+            this.dgvEncomendas.AllowUserToDeleteRows = false;
             this.dgvEncomendas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -706,6 +708,7 @@ namespace Projeto_DS_Condominio.View
             this.dgvEncomendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEncomendas.Location = new System.Drawing.Point(18, 15);
             this.dgvEncomendas.Name = "dgvEncomendas";
+            this.dgvEncomendas.ReadOnly = true;
             this.dgvEncomendas.Size = new System.Drawing.Size(503, 340);
             this.dgvEncomendas.TabIndex = 0;
             // 

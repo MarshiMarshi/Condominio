@@ -15,11 +15,13 @@ namespace Projeto_DS_Condominio.View
         public frmMoradorView()
         {
             InitializeComponent();
+            tabCRUD.TabPages.Remove(tpUpdate);
         }
 
-        private bool isSucessful;
+        private bool isSuccessful;
         private bool isEditing;
         private bool isSearching;
+        private string mensagem;
 
         private static frmMoradorView instance;
         private void AssociateAndRaiseViewEvents()
@@ -32,7 +34,17 @@ namespace Projeto_DS_Condominio.View
             };
             btnSalvar.Click += delegate { SalvaEvent?.Invoke(this, EventArgs.Empty); };
             btnLimpar.Click += delegate { CancelaEvent?.Invoke(this, EventArgs.Empty); };
-            //Others
+            
+            btnSalvar.Click += delegate
+            {
+                SalvaEvent?.Invoke(this, EventArgs.Empty);
+                if (isSuccessful)
+                {
+                    tabCRUD.TabPages.Remove(tpCreate);
+                    tabCRUD.TabPages.Add(tpUpdate);
+                }
+                MessageBox.Show(mensagem);
+            };
         }
 
         public string Nome
@@ -137,10 +149,16 @@ namespace Projeto_DS_Condominio.View
             set { isSearching = value; }
         }
 
-        public bool IsSucessful
+        public bool IsSuccessful
         {
-            get { return isSucessful; }
-            set { isSucessful = value; }
+            get { return isSuccessful; }
+            set { isSuccessful = value; }
+        }
+
+        public string Mensagem
+        {
+            get { return mensagem; }
+            set { mensagem = value; }
         }
 
         internal static frmMoradorView GetInstance(frmMainView mainView)

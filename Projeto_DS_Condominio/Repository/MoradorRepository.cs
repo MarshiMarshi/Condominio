@@ -121,13 +121,13 @@ namespace Projeto_DS_Condominio.Repository
                     command.Parameters.Add("@nome", SqlDbType.VarChar).Value = valNome;
                 }
 
-                if (valRg != "")
+                if (rg != "")
                 {
                     command.CommandText += "and rg_morador = @rg ";
                     command.Parameters.Add("@rg", SqlDbType.Char).Value = rg;
                 }
 
-                if (valCpf != "")
+                if (cpf != "")
                 {
                     command.CommandText += "and cpf_morador = @cpf ";
                     command.Parameters.Add("@cpf", SqlDbType.Char).Value = cpf;
@@ -154,8 +154,8 @@ namespace Projeto_DS_Condominio.Repository
                         Morador morador = new Morador();
                         morador.Id = (int)reader[0];
                         morador.Nome = reader[1].ToString();
-                        morador.Rg.Digitos = reader[2].ToString();
-                        morador.Cpf.Digitos = reader[3].ToString();
+                        morador.Rg = new Rg(reader[2].ToString());
+                        morador.Cpf = new Cpf(reader[3].ToString());
 
                         BlocoEnum blocoLido;
                         Enum.TryParse<BlocoEnum>(reader[4].ToString(), out blocoLido);
