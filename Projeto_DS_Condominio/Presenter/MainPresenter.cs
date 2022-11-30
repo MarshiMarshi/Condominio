@@ -24,7 +24,9 @@ namespace Projeto_DS_Condominio.Presenter
 
         private void ShowEncomendaView(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            IEncomendaView encomendaView = FrmEncomendaView.GetInstance((frmMainView)mainView);
+            IEncomendaRepository encomendaRepository = new EncomendaRepository(sqlConnectionString);
+            new EncomendaPresenter(encomendaView, encomendaRepository);
         }
 
         private void ShowMoradorView(object sender, EventArgs e)
