@@ -426,6 +426,9 @@ namespace Projeto_DS_Condominio.View
             // 
             // pnlEncomendas
             // 
+            this.pnlEncomendas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlEncomendas.BackColor = System.Drawing.Color.White;
             this.pnlEncomendas.Controls.Add(this.listView1);
             this.pnlEncomendas.Location = new System.Drawing.Point(267, 136);
@@ -526,10 +529,13 @@ namespace Projeto_DS_Condominio.View
             // 
             // listView1
             // 
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(30, 21);
+            this.listView1.Location = new System.Drawing.Point(15, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(485, 273);
+            this.listView1.Size = new System.Drawing.Size(513, 290);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -537,10 +543,12 @@ namespace Projeto_DS_Condominio.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(810, 450);
             this.Controls.Add(this.pnlEncomendas);
             this.Controls.Add(this.tabCRUD);
             this.Controls.Add(this.pnlPesquisa);
+            this.MinimumSize = new System.Drawing.Size(730, 297);
             this.Name = "frmMoradorView";
             this.Text = "MoradorView";
             this.tabCRUD.ResumeLayout(false);
