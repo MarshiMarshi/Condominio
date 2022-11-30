@@ -24,14 +24,14 @@ namespace Projeto_DS_Condominio.View
         private static frmMoradorView instance;
         private void AssociateAndRaiseViewEvents()
         {
-            btnPesquisar.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+            btnPesquisar.Click += delegate { PesquisaEvent?.Invoke(this, EventArgs.Empty); };
             txtNomePesquisa.KeyDown += (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter)
-                    SearchEvent?.Invoke(this, EventArgs.Empty);
+                    PesquisaEvent?.Invoke(this, EventArgs.Empty);
             };
-            btnSalvar.Click += delegate { SaveEvent?.Invoke(this, EventArgs.Empty); };
-            btnLimpar.Click += delegate { CancelEvent?.Invoke(this, EventArgs.Empty); };
+            btnSalvar.Click += delegate { SalvaEvent?.Invoke(this, EventArgs.Empty); };
+            btnLimpar.Click += delegate { CancelaEvent?.Invoke(this, EventArgs.Empty); };
             //Others
         }
 
@@ -161,12 +161,12 @@ namespace Projeto_DS_Condominio.View
             }
             return instance;
         }
-
-        public event EventHandler SearchEvent;
-        public event EventHandler AddNewEvent;
-        public event EventHandler EditEvent;
+        
+        public event EventHandler PesquisaEvent;
+        public event EventHandler AdicionaEvent;
+        public event EventHandler EditaEvent;
+        public event EventHandler SalvaEvent;
+        public event EventHandler CancelaEvent;
         public event EventHandler DeleteEvent;
-        public event EventHandler SaveEvent;
-        public event EventHandler CancelEvent;
     }
 }

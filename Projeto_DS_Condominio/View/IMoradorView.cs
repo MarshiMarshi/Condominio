@@ -18,12 +18,12 @@ namespace Projeto_DS_Condominio.View
         bool IsSucessful { get; set; }
         bool IsSearching { get; set; }
 
-        event EventHandler SearchEvent;
-        event EventHandler AddNewEvent;
-        event EventHandler EditEvent;
+        event EventHandler PesquisaEvent;
+        event EventHandler AdicionaEvent;
+        event EventHandler EditaEvent;
         event EventHandler DeleteEvent;
-        event EventHandler SaveEvent;
-        event EventHandler CancelEvent;
+        event EventHandler SalvaEvent;
+        event EventHandler CancelaEvent;
 
         void Show();
     }
