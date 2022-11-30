@@ -530,6 +530,9 @@ namespace Projeto_DS_Condominio.View
             // 
             // dgvMoradores
             // 
+            this.dgvMoradores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMoradores.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvMoradores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMoradores.Location = new System.Drawing.Point(15, 21);
