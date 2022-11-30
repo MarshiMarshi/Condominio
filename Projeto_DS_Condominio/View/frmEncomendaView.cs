@@ -124,8 +124,8 @@ namespace Projeto_DS_Condominio.View
         }
         public string Mensagem 
         { 
-            get => throw new NotImplementedException();
-            set => throw new NotImplementedException(); 
+            get { return mensagem; };
+            set { this.mensagem = value; }; 
         }
         public int GuiaSelecionada
         {
