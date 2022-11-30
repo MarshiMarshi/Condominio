@@ -48,7 +48,7 @@ namespace Projeto_DS_Condominio.View
             this.tlpMudarView.RowCount = 2;
             this.tlpMudarView.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpMudarView.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpMudarView.Size = new System.Drawing.Size(91, 351);
+            this.tlpMudarView.Size = new System.Drawing.Size(91, 501);
             this.tlpMudarView.TabIndex = 3;
             // 
             // btnMorador
@@ -56,9 +56,9 @@ namespace Projeto_DS_Condominio.View
             this.btnMorador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnMorador.BackgroundImage = global::Projeto_DS_Condominio.Properties.Resources.user_solid;
             this.btnMorador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMorador.Location = new System.Drawing.Point(6, 178);
+            this.btnMorador.Location = new System.Drawing.Point(6, 253);
             this.btnMorador.Name = "btnMorador";
-            this.btnMorador.Size = new System.Drawing.Size(79, 170);
+            this.btnMorador.Size = new System.Drawing.Size(79, 245);
             this.btnMorador.TabIndex = 2;
             this.btnMorador.UseVisualStyleBackColor = true;
             // 
@@ -69,7 +69,7 @@ namespace Projeto_DS_Condominio.View
             this.btnEncomenda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEncomenda.Location = new System.Drawing.Point(6, 3);
             this.btnEncomenda.Name = "btnEncomenda";
-            this.btnEncomenda.Size = new System.Drawing.Size(79, 169);
+            this.btnEncomenda.Size = new System.Drawing.Size(79, 244);
             this.btnEncomenda.TabIndex = 1;
             this.btnEncomenda.UseVisualStyleBackColor = true;
             // 
@@ -77,7 +77,7 @@ namespace Projeto_DS_Condominio.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 351);
+            this.ClientSize = new System.Drawing.Size(870, 501);
             this.Controls.Add(this.tlpMudarView);
             this.IsMdiContainer = true;
             this.MinimumSize = new System.Drawing.Size(16, 390);

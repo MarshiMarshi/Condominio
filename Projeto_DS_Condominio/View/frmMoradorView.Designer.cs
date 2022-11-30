@@ -48,25 +48,6 @@ namespace Projeto_DS_Condominio.View
             this.lblBloco = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.tpUpdate = new System.Windows.Forms.TabPage();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.lblStatusPesquisa = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlEncomendas = new System.Windows.Forms.Panel();
-            this.cmbBlocoPesquisa = new System.Windows.Forms.ComboBox();
-            this.txtApartamentoPesquisa = new System.Windows.Forms.TextBox();
-            this.lblApartamentoPesquisa = new System.Windows.Forms.Label();
-            this.mtxRGPesquisa = new System.Windows.Forms.MaskedTextBox();
-            this.lblRGPesquisa = new System.Windows.Forms.Label();
-            this.mtxCPFPesquisa = new System.Windows.Forms.MaskedTextBox();
-            this.lblCPFPesquisa = new System.Windows.Forms.Label();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.grpMoradorEdicao = new System.Windows.Forms.GroupBox();
             this.mtxCPFEdicao = new System.Windows.Forms.MaskedTextBox();
             this.mtxRGEdicao = new System.Windows.Forms.MaskedTextBox();
@@ -78,14 +59,25 @@ namespace Projeto_DS_Condominio.View
             this.cmbBlocoEdicao = new System.Windows.Forms.ComboBox();
             this.lblBlocoEdicao = new System.Windows.Forms.Label();
             this.txtNomeEdicao = new System.Windows.Forms.TextBox();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblStatusPesquisa = new System.Windows.Forms.Label();
+            this.pnlEncomendas = new System.Windows.Forms.Panel();
+            this.cmbBlocoPesquisa = new System.Windows.Forms.ComboBox();
+            this.txtApartamentoPesquisa = new System.Windows.Forms.TextBox();
+            this.lblApartamentoPesquisa = new System.Windows.Forms.Label();
+            this.mtxRGPesquisa = new System.Windows.Forms.MaskedTextBox();
+            this.lblRGPesquisa = new System.Windows.Forms.Label();
+            this.mtxCPFPesquisa = new System.Windows.Forms.MaskedTextBox();
+            this.lblCPFPesquisa = new System.Windows.Forms.Label();
             this.pnlPesquisa = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.tabCRUD.SuspendLayout();
             this.tpCreate.SuspendLayout();
             this.grpMorador.SuspendLayout();
             this.tpUpdate.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.pnlEncomendas.SuspendLayout();
             this.grpMoradorEdicao.SuspendLayout();
+            this.pnlEncomendas.SuspendLayout();
             this.pnlPesquisa.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -289,206 +281,6 @@ namespace Projeto_DS_Condominio.View
             this.tpUpdate.TabIndex = 1;
             this.tpUpdate.Text = "Editar Morador";
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(6, 197);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(247, 23);
-            this.btnCancelar.TabIndex = 32;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // lblStatusPesquisa
-            // 
-            this.lblStatusPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblStatusPesquisa.AutoSize = true;
-            this.lblStatusPesquisa.Location = new System.Drawing.Point(6, 73);
-            this.lblStatusPesquisa.Name = "lblStatusPesquisa";
-            this.lblStatusPesquisa.Size = new System.Drawing.Size(37, 13);
-            this.lblStatusPesquisa.TabIndex = 34;
-            this.lblStatusPesquisa.Text = "Bloco:";
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(241)))), ((int)(((byte)(251)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(6, 16);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(509, 78);
-            this.panel3.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(294, 18);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "RG: 22.038.990-1";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(392, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "CPF: 123.456.789-09";
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(425, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Editar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(85, 47);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(113, 17);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Apartamento: 77";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(19, 47);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 17);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Bloco: B";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(18, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(219, 20);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Gustavo Gonçalo Rodrigues";
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.Lime;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(513, 16);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(18, 78);
-            this.panel2.TabIndex = 1;
-            // 
-            // pnlEncomendas
-            // 
-            this.pnlEncomendas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlEncomendas.BackColor = System.Drawing.Color.White;
-            this.pnlEncomendas.Controls.Add(this.panel2);
-            this.pnlEncomendas.Controls.Add(this.panel3);
-            this.pnlEncomendas.Location = new System.Drawing.Point(267, 136);
-            this.pnlEncomendas.Name = "pnlEncomendas";
-            this.pnlEncomendas.Size = new System.Drawing.Size(543, 314);
-            this.pnlEncomendas.TabIndex = 31;
-            // 
-            // cmbBlocoPesquisa
-            // 
-            this.cmbBlocoPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBlocoPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbBlocoPesquisa.FormattingEnabled = true;
-            this.cmbBlocoPesquisa.Location = new System.Drawing.Point(47, 70);
-            this.cmbBlocoPesquisa.Name = "cmbBlocoPesquisa";
-            this.cmbBlocoPesquisa.Size = new System.Drawing.Size(82, 21);
-            this.cmbBlocoPesquisa.TabIndex = 38;
-            // 
-            // txtApartamentoPesquisa
-            // 
-            this.txtApartamentoPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtApartamentoPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApartamentoPesquisa.Location = new System.Drawing.Point(307, 71);
-            this.txtApartamentoPesquisa.Name = "txtApartamentoPesquisa";
-            this.txtApartamentoPesquisa.Size = new System.Drawing.Size(98, 20);
-            this.txtApartamentoPesquisa.TabIndex = 39;
-            // 
-            // lblApartamentoPesquisa
-            // 
-            this.lblApartamentoPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblApartamentoPesquisa.AutoSize = true;
-            this.lblApartamentoPesquisa.Location = new System.Drawing.Point(231, 74);
-            this.lblApartamentoPesquisa.Name = "lblApartamentoPesquisa";
-            this.lblApartamentoPesquisa.Size = new System.Drawing.Size(70, 13);
-            this.lblApartamentoPesquisa.TabIndex = 40;
-            this.lblApartamentoPesquisa.Text = "Apartamento:";
-            // 
-            // mtxRGPesquisa
-            // 
-            this.mtxRGPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.mtxRGPesquisa.Location = new System.Drawing.Point(47, 44);
-            this.mtxRGPesquisa.Mask = "00.000.000-0";
-            this.mtxRGPesquisa.Name = "mtxRGPesquisa";
-            this.mtxRGPesquisa.Size = new System.Drawing.Size(82, 20);
-            this.mtxRGPesquisa.TabIndex = 42;
-            // 
-            // lblRGPesquisa
-            // 
-            this.lblRGPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblRGPesquisa.AutoSize = true;
-            this.lblRGPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRGPesquisa.Location = new System.Drawing.Point(6, 47);
-            this.lblRGPesquisa.Name = "lblRGPesquisa";
-            this.lblRGPesquisa.Size = new System.Drawing.Size(26, 13);
-            this.lblRGPesquisa.TabIndex = 41;
-            this.lblRGPesquisa.Text = "RG:";
-            // 
-            // mtxCPFPesquisa
-            // 
-            this.mtxCPFPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.mtxCPFPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.mtxCPFPesquisa.Location = new System.Drawing.Point(307, 45);
-            this.mtxCPFPesquisa.Mask = "000.000.000-00";
-            this.mtxCPFPesquisa.Name = "mtxCPFPesquisa";
-            this.mtxCPFPesquisa.Size = new System.Drawing.Size(98, 20);
-            this.mtxCPFPesquisa.TabIndex = 44;
-            // 
-            // lblCPFPesquisa
-            // 
-            this.lblCPFPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCPFPesquisa.AutoSize = true;
-            this.lblCPFPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCPFPesquisa.Location = new System.Drawing.Point(231, 48);
-            this.lblCPFPesquisa.Name = "lblCPFPesquisa";
-            this.lblCPFPesquisa.Size = new System.Drawing.Size(30, 13);
-            this.lblCPFPesquisa.TabIndex = 43;
-            this.lblCPFPesquisa.Text = "CPF:";
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(6, 168);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(247, 23);
-            this.btnEditar.TabIndex = 33;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            // 
             // grpMoradorEdicao
             // 
             this.grpMoradorEdicao.Controls.Add(this.mtxCPFEdicao);
@@ -603,6 +395,115 @@ namespace Projeto_DS_Condominio.View
             this.txtNomeEdicao.Size = new System.Drawing.Size(169, 20);
             this.txtNomeEdicao.TabIndex = 21;
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(6, 168);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(247, 23);
+            this.btnEditar.TabIndex = 33;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(6, 197);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(247, 23);
+            this.btnCancelar.TabIndex = 32;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // lblStatusPesquisa
+            // 
+            this.lblStatusPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblStatusPesquisa.AutoSize = true;
+            this.lblStatusPesquisa.Location = new System.Drawing.Point(6, 73);
+            this.lblStatusPesquisa.Name = "lblStatusPesquisa";
+            this.lblStatusPesquisa.Size = new System.Drawing.Size(37, 13);
+            this.lblStatusPesquisa.TabIndex = 34;
+            this.lblStatusPesquisa.Text = "Bloco:";
+            // 
+            // pnlEncomendas
+            // 
+            this.pnlEncomendas.BackColor = System.Drawing.Color.White;
+            this.pnlEncomendas.Controls.Add(this.listView1);
+            this.pnlEncomendas.Location = new System.Drawing.Point(267, 136);
+            this.pnlEncomendas.Name = "pnlEncomendas";
+            this.pnlEncomendas.Size = new System.Drawing.Size(543, 314);
+            this.pnlEncomendas.TabIndex = 31;
+            // 
+            // cmbBlocoPesquisa
+            // 
+            this.cmbBlocoPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBlocoPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBlocoPesquisa.FormattingEnabled = true;
+            this.cmbBlocoPesquisa.Location = new System.Drawing.Point(47, 70);
+            this.cmbBlocoPesquisa.Name = "cmbBlocoPesquisa";
+            this.cmbBlocoPesquisa.Size = new System.Drawing.Size(82, 21);
+            this.cmbBlocoPesquisa.TabIndex = 38;
+            // 
+            // txtApartamentoPesquisa
+            // 
+            this.txtApartamentoPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtApartamentoPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApartamentoPesquisa.Location = new System.Drawing.Point(307, 71);
+            this.txtApartamentoPesquisa.Name = "txtApartamentoPesquisa";
+            this.txtApartamentoPesquisa.Size = new System.Drawing.Size(98, 20);
+            this.txtApartamentoPesquisa.TabIndex = 39;
+            // 
+            // lblApartamentoPesquisa
+            // 
+            this.lblApartamentoPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblApartamentoPesquisa.AutoSize = true;
+            this.lblApartamentoPesquisa.Location = new System.Drawing.Point(231, 74);
+            this.lblApartamentoPesquisa.Name = "lblApartamentoPesquisa";
+            this.lblApartamentoPesquisa.Size = new System.Drawing.Size(70, 13);
+            this.lblApartamentoPesquisa.TabIndex = 40;
+            this.lblApartamentoPesquisa.Text = "Apartamento:";
+            // 
+            // mtxRGPesquisa
+            // 
+            this.mtxRGPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.mtxRGPesquisa.Location = new System.Drawing.Point(47, 44);
+            this.mtxRGPesquisa.Mask = "00.000.000-0";
+            this.mtxRGPesquisa.Name = "mtxRGPesquisa";
+            this.mtxRGPesquisa.Size = new System.Drawing.Size(82, 20);
+            this.mtxRGPesquisa.TabIndex = 42;
+            // 
+            // lblRGPesquisa
+            // 
+            this.lblRGPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblRGPesquisa.AutoSize = true;
+            this.lblRGPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRGPesquisa.Location = new System.Drawing.Point(6, 47);
+            this.lblRGPesquisa.Name = "lblRGPesquisa";
+            this.lblRGPesquisa.Size = new System.Drawing.Size(26, 13);
+            this.lblRGPesquisa.TabIndex = 41;
+            this.lblRGPesquisa.Text = "RG:";
+            // 
+            // mtxCPFPesquisa
+            // 
+            this.mtxCPFPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.mtxCPFPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.mtxCPFPesquisa.Location = new System.Drawing.Point(307, 45);
+            this.mtxCPFPesquisa.Mask = "000.000.000-00";
+            this.mtxCPFPesquisa.Name = "mtxCPFPesquisa";
+            this.mtxCPFPesquisa.Size = new System.Drawing.Size(98, 20);
+            this.mtxCPFPesquisa.TabIndex = 44;
+            // 
+            // lblCPFPesquisa
+            // 
+            this.lblCPFPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCPFPesquisa.AutoSize = true;
+            this.lblCPFPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPFPesquisa.Location = new System.Drawing.Point(231, 48);
+            this.lblCPFPesquisa.Name = "lblCPFPesquisa";
+            this.lblCPFPesquisa.Size = new System.Drawing.Size(30, 13);
+            this.lblCPFPesquisa.TabIndex = 43;
+            this.lblCPFPesquisa.Text = "CPF:";
+            // 
             // pnlPesquisa
             // 
             this.pnlPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -623,6 +524,15 @@ namespace Projeto_DS_Condominio.View
             this.pnlPesquisa.Size = new System.Drawing.Size(525, 100);
             this.pnlPesquisa.TabIndex = 45;
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(30, 21);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(485, 273);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // frmMoradorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -638,11 +548,9 @@ namespace Projeto_DS_Condominio.View
             this.grpMorador.ResumeLayout(false);
             this.grpMorador.PerformLayout();
             this.tpUpdate.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.pnlEncomendas.ResumeLayout(false);
             this.grpMoradorEdicao.ResumeLayout(false);
             this.grpMoradorEdicao.PerformLayout();
+            this.pnlEncomendas.ResumeLayout(false);
             this.pnlPesquisa.ResumeLayout(false);
             this.pnlPesquisa.PerformLayout();
             this.ResumeLayout(false);
@@ -671,14 +579,6 @@ namespace Projeto_DS_Condominio.View
         private System.Windows.Forms.TabPage tpUpdate;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblStatusPesquisa;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel pnlEncomendas;
         private System.Windows.Forms.ComboBox cmbBlocoPesquisa;
         private System.Windows.Forms.TextBox txtApartamentoPesquisa;
@@ -700,5 +600,6 @@ namespace Projeto_DS_Condominio.View
         private System.Windows.Forms.TextBox txtNomeEdicao;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Panel pnlPesquisa;
+        private System.Windows.Forms.ListView listView1;
     }
 }
