@@ -111,9 +111,9 @@ namespace Projeto_DS_Condominio.View
             return instance;
         }
 
-        public void SetEncomendaListBindingSourc(BindingSource encomendaList)
+        public void SetEncomendaListBindingSource(BindingSource encomendaList)
         {
-            //pnlEncomendas.DataSourc = encomendaList;
+            dgvEncomendas.DataSource = encomendaList;
         }
     }
 }

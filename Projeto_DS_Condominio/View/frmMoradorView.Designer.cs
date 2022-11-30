@@ -71,7 +71,7 @@ namespace Projeto_DS_Condominio.View
             this.mtxCPFPesquisa = new System.Windows.Forms.MaskedTextBox();
             this.lblCPFPesquisa = new System.Windows.Forms.Label();
             this.pnlPesquisa = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.dgvMoradores = new System.Windows.Forms.DataGridView();
             this.tabCRUD.SuspendLayout();
             this.tpCreate.SuspendLayout();
             this.grpMorador.SuspendLayout();
@@ -79,6 +79,7 @@ namespace Projeto_DS_Condominio.View
             this.grpMoradorEdicao.SuspendLayout();
             this.pnlEncomendas.SuspendLayout();
             this.pnlPesquisa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMoradores)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNomePesquisa
@@ -430,7 +431,7 @@ namespace Projeto_DS_Condominio.View
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlEncomendas.BackColor = System.Drawing.Color.White;
-            this.pnlEncomendas.Controls.Add(this.listView1);
+            this.pnlEncomendas.Controls.Add(this.dgvMoradores);
             this.pnlEncomendas.Location = new System.Drawing.Point(267, 136);
             this.pnlEncomendas.Name = "pnlEncomendas";
             this.pnlEncomendas.Size = new System.Drawing.Size(543, 314);
@@ -527,17 +528,14 @@ namespace Projeto_DS_Condominio.View
             this.pnlPesquisa.Size = new System.Drawing.Size(525, 100);
             this.pnlPesquisa.TabIndex = 45;
             // 
-            // listView1
+            // dgvMoradores
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(15, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(513, 290);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.dgvMoradores.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgvMoradores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMoradores.Location = new System.Drawing.Point(15, 21);
+            this.dgvMoradores.Name = "dgvMoradores";
+            this.dgvMoradores.Size = new System.Drawing.Size(513, 273);
+            this.dgvMoradores.TabIndex = 0;
             // 
             // frmMoradorView
             // 
@@ -561,6 +559,7 @@ namespace Projeto_DS_Condominio.View
             this.pnlEncomendas.ResumeLayout(false);
             this.pnlPesquisa.ResumeLayout(false);
             this.pnlPesquisa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMoradores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -608,6 +607,6 @@ namespace Projeto_DS_Condominio.View
         private System.Windows.Forms.TextBox txtNomeEdicao;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Panel pnlPesquisa;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.DataGridView dgvMoradores;
     }
 }

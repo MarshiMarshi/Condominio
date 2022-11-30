@@ -31,7 +31,7 @@ namespace Projeto_DS_Condominio.View
         event EventHandler PesquisarEvent;
 
         //Methods
-        void SetEncomendaListBindingSourc(BindingSource encomendaList);
+        void SetEncomendaListBindingSource(BindingSource encomendaList);
         void Show();
     }
 }

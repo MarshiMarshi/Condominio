@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Projeto_DS_Condominio.View
 {
@@ -25,6 +26,7 @@ namespace Projeto_DS_Condominio.View
         event EventHandler SalvaEvent;
         event EventHandler CancelaEvent;
 
+        void SetEncomendaListBindingSource(BindingSource moradorList);
         void Show();
     }
 }

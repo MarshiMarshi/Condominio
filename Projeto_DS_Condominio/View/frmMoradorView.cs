@@ -168,5 +168,10 @@ namespace Projeto_DS_Condominio.View
         public event EventHandler SalvaEvent;
         public event EventHandler CancelaEvent;
         public event EventHandler DeleteEvent;
+
+        public void SetEncomendaListBindingSource(BindingSource moradorList)
+        {
+            dgvMoradores.DataSource = moradorList;
+        }
     }
 }

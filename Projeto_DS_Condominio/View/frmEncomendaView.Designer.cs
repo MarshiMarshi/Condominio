@@ -86,7 +86,7 @@ namespace Projeto_DS_Condominio.View
             this.lblNomeDestinatarioPesquisa = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.pnlEncomendas = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.dgvEncomendas = new System.Windows.Forms.DataGridView();
             this.tabCRUD.SuspendLayout();
             this.tpCreate.SuspendLayout();
             this.grpDestinatario.SuspendLayout();
@@ -97,6 +97,7 @@ namespace Projeto_DS_Condominio.View
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.pnlEncomendas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEncomendas)).BeginInit();
             this.SuspendLayout();
             // 
             // tabCRUD
@@ -690,23 +691,20 @@ namespace Projeto_DS_Condominio.View
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlEncomendas.BackColor = System.Drawing.Color.White;
-            this.pnlEncomendas.Controls.Add(this.listView1);
+            this.pnlEncomendas.Controls.Add(this.dgvEncomendas);
             this.pnlEncomendas.Location = new System.Drawing.Point(267, 129);
             this.pnlEncomendas.Name = "pnlEncomendas";
             this.pnlEncomendas.Size = new System.Drawing.Size(533, 370);
             this.pnlEncomendas.TabIndex = 12;
             // 
-            // listView1
+            // dgvEncomendas
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(18, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(503, 346);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.dgvEncomendas.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgvEncomendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEncomendas.Location = new System.Drawing.Point(18, 15);
+            this.dgvEncomendas.Name = "dgvEncomendas";
+            this.dgvEncomendas.Size = new System.Drawing.Size(503, 340);
+            this.dgvEncomendas.TabIndex = 0;
             // 
             // FrmEncomendaView
             // 
@@ -743,6 +741,7 @@ namespace Projeto_DS_Condominio.View
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.pnlEncomendas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEncomendas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -806,6 +805,6 @@ namespace Projeto_DS_Condominio.View
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Panel pnlEncomendas;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.DataGridView dgvEncomendas;
     }
 }
